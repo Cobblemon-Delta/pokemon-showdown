@@ -6,7 +6,7 @@ export const Formats: FormatList = [
 		section: "Cobblemon",
 	},
 	{
-		name: "[Cobblemon] Single Battle",
+		name: "[Gen 9] Single Battle",
 		desc: "Cobblemon Single Battles",
 		mod: 'cobblemon',
 		ruleset: ['Standard'],
