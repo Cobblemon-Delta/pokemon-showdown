@@ -88,7 +88,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		formeOrder: ["Wooper", "Wooper-Paldea", "Wooper-Delta"],
 	},
 	wooperdelta: {
-		num: 2001,
+		num: 194,
 		name: "Wooper-Delta",
 		baseSpecies: "Wooper",
 		forme: "Delta",
