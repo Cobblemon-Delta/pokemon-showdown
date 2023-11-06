@@ -1,4 +1,24 @@
 export const Abilities: {[k: string]: ModdedAbilityData} = {
+	fatalize: {
+		onModifyTypePriority: -5,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgement', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball'
+			];
+			if(move.type === "Normal" && !noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Dark';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if(move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4095]);
+		},
+		name: "Fatalize",
+		shortDesc: "Causes all Normal-type moves to be Dark-type and gains 1.2x more power.",
+		rating: 4,
+		num: 184,
+	},
 	precedence: {
 		onModifyDamage(damage, source, target, move) {
 			if(move.priority > 0.1) {

@@ -33,6 +33,29 @@ export const Moves: {[moveid: string]: ModdedMoveData} = {
 		type: "Electric",
 		contestType: "Cool",
 	},
+	colddeparture: {
+		num: 10004,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Cold Departure",
+		pp: 20,
+		priority: 0,
+		flags: { protect: 1, reflectable: 1, mirror: 1, sound: 1, bypasssub: 1 },
+		onHit(target, source, move) {
+			const success = this.boost({def: -1, spd: -1, spe: -1}, target, source);
+			if(!success && !target.hasAbility('mirrorarmor')) {
+				delete move.selfSwitch;
+			}
+		},
+		selfSwitch: true,
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		zMove: { effect: "healreplacement" },
+		contestType: "Cool",
+		shortDesc: "Lowers the target's Defense, Special Defense, and Speed by 1 stage; Switches Out.",
+	},
 	// decisivebolt: {
 	// 	num: 10000,
 	// 	accuracy: 100,

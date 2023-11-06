@@ -1,5 +1,52 @@
 export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 
+	//#region Aegislash-Delta's Evolution Line
+	honedge: {
+		inherit: true,
+		otherFormes: ["Honedge-Delta"],
+		formeOrder: ["Honedge", "Honedge-Delta"],
+	},
+	honedgedelta: {
+		num: 679,
+		name: "Honedge-Delta",
+		baseSpecies: "Honedge",
+		forme: "Delta",
+		types: ["Steel", "Ghost"],
+		baseStats: {hp: 45, atk: 60, def: 47, spa: 35, spd: 80, spe: 58},
+		abilities: {0: "Rough Skin"},
+		heightm: 0.8,
+		weightkg: 2,
+		color: "Brown",
+		evos: ["Doublade-Delta"],
+		eggGroups: ["Mineral"],
+	},
+	doublade: {
+		inherit: true,
+		otherFormes: ["Doublade-Delta"],
+		formeOrder: ["Doublade", "Doublade-Delta"],
+	},
+	doubladedelta: {
+		num: 680,
+		name: "Doublade-Delta",
+		baseSpecies: "Doublade",
+		forme: "Delta",
+		types: ["Steel", "Fire"],
+		baseStats: {hp: 64, atk: 85, def: 68, spa: 40, spd: 135, spe: 56},
+		abilities: {0: "Flash Fire"},
+		heightm: 0.8,
+		weightkg: 4.5,
+		color: "Brown",
+		prevo: "Honedge-Delta",
+		evoLevel: 35,
+		eggGroups: ["Mineral"],
+	},
+	aegislash: {
+		inherit: true,
+		otherFormes: ["Aegislash-Blade", "Aegislash-Delta", "Aegislash-Delta-Blade"],
+		formeOrder: ["Aegislash", "Aegislash-Blade", "Aegislash-Delta", "Aegislash-Delta-Blade"],
+	},
+	//#endregion
+
 	//#region Dragetsu
 	dragonair: {
 		inherit: true,
@@ -18,6 +65,33 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		evoType: "useItem",
 		evoItem: "Dragon Scale",
 		eggGroups: ["Water 1", "Dragon"],
+	},
+	//#endregion
+
+	//#region New Eevees
+	eevee: {
+		inherit: true,
+		evos: [
+			// Original Evos
+			"Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon", "Leafeon", "Glaceon", "Sylveon",
+			// New Evos
+			"Veneon",
+		],
+	},
+	veneon: {
+		num: 10013,
+		name: "Veneon",
+		types: ["Poison"],
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 65, atk: 60, def: 130, spa: 95, spd: 110, spe: 65},
+		abilities: {0: "Liquid Ooze", H: "Corrosion"},
+		heightm: 1,
+		weightkg: 28,
+		color: "Purple",
+		prevo: "Eevee",
+		evoType: "useItem",
+		evoItem: "Black Sludge",
+		eggGroups: ["Field"],
 	},
 	//#endregion
 
@@ -126,6 +200,31 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		weightkg: 40,
 		color: "Orange",
 		eggGroups: ["Water 1"],
+	},
+	//#endregion
+
+	//#region Lopunny-Delta
+	buneary: {
+		inherit: true,
+		evos: ["Lopunny", "Lopunny-Delta"],
+	},
+	lopunny: {
+		inherit: true,
+		otherFormes: ["Lopunny-Mega", "Lopunny-Delta"],
+		formeOrder: ["Lopunny", "Lopunny-Mega", "Lopunny-Delta"],
+	},
+	lopunnydelta: {
+		num: 428,
+		name: "Lopunny-Delta",
+		baseSpecies: "Lopunny",
+		forme: "Delta",
+		types: ["Dark", "Fairy"],
+		baseStats: {hp: 75, atk: 85, def: 76, spa: 60, spd: 92, spe: 92},
+		abilities: {0: "Cute Charm", 1: "Fatalize", H: "Queenly Majesty"},
+		heightm: 1.3,
+		weightkg: 28.3,
+		color: 'Gray',
+		eggGroups: ["Field", "Human-Like"],
 	},
 	//#endregion
 
