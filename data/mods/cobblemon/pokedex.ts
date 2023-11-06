@@ -1,4 +1,26 @@
 export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
+
+	//#region Dragetsu
+	dragonair: {
+		inherit: true,
+		evos: ["Dragonite", "Dragetsu"],
+	},
+	dragetsu: {
+		num: 20012,
+		name: "Dragetsu",
+		types: ["Dragon"],
+		baseStats: {hp: 93, atk: 80, def: 88, spa: 120, spd: 127, spe: 92},
+		abilities: {0: "Shed Skin", H: "Pure Guise"},
+		heightm: 5,
+		weightkg: 20,
+		color: "Blue",
+		prevo: "Dragonair",
+		evoType: "useItem",
+		evoItem: "Dragon Scale",
+		eggGroups: ["Water 1", "Dragon"],
+	},
+	//#endregion
+
 	//#region Garchomp-Delta's Evolution Line
 	gible: {
 		inherit: true,
@@ -39,7 +61,74 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		evos: ["Garchomp-Delta"],
 		eggGroups: ["Dragon", "Monster"],
 	},
+	garchomp: {
+		inherit: true,
+		otherFormes: ["Garchomp-Mega", "Garchomp-Delta"],
+		formeOrder: ["Garchomp", "Garchomp-Mega", "Garchomp-Delta"],
+	},
+	garchompdelta: {
+		num: 445,
+		name: "Garchomp-Delta",
+		baseSpecies: "Garchomp",
+		baseForme: "Delta",
+		types: ["Dragon", "Ice"],
+		baseStats: {hp: 94, atk: 90, def: 105, spa: 102, spd: 114, spe: 95},
+		abilities: {0: "Slush Rush", H: "Own Tempo"},
+		heightm: 1.9,
+		weightkg: 95,
+		color: "Blue",
+		prevo: "Gabite-Delta",
+		evoLevel: 48,
+		eggGroups: ["Dragon", "Monster"],
+	},
 	//#endregion
+	
+	//#region Gorochu
+	raichu: {
+		inherit: true,
+		evos: ["Gorochu"],
+	},
+	gorochu: {
+		num: 2010,
+		name: "Gorochu",
+		types: ["Electric"],
+		baseStats: {hp: 60, atk: 120, def: 90, spa: 90, spd: 130, spe: 110},
+		abilities: {0: "Static", 1: "Transistor"},
+		heightm: 1,
+		weightkg: 45,
+		color: "Yellow",
+		prevo: "Raichu",
+		evoType: "levelHold",
+		evoItem: "Lightning Rod",
+		eggGroups: ["Fairy", "Field"],
+	},
+	//#endregion
+
+	//#region Greninja-Delta
+	frogadier: {
+		inherit: true,
+		evos: ["Greninja", "Greninja-Delta"],
+	},
+	greninja: {
+		inherit: true,
+		otherFormes: ["Greninja-Bond", "Greninja-Ash", "Greninja-Delta"],
+		formeOrder: ["Greninja", "Greninja-Bond", "Greninja-Ash", "Greninja-Delta"],
+	},
+	greninjadelta: {
+		num: 658,
+		name: "Greninja-Delta",
+		baseSpecies: "Greninja",
+		forme: "Delta",
+		types: ["Water", "Rock"],
+		baseStats: {hp: 72, atk: 115, def: 85, spa: 83, spd: 66, spe: 109},
+		abilities: {0: "Torrent", H: "Precedence"},
+		heightm: 1.5,
+		weightkg: 40,
+		color: "Orange",
+		eggGroups: ["Water 1"],
+	},
+	//#endregion
+
 	//#region Lucaurus
 	riolu: { // Adjusting Riolu's Evolution Paths.
 		inherit: true,
@@ -61,6 +150,49 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		eggGroups: ["Field", "Human-Like"]
 	},
 	//#endregion
+
+	//#region Raticate-Delta's Evolution line
+	rattata: {
+		inherit: true,
+		otherFormes: ["Rattata-Alola", "Rattata-Delta"],
+		formeOrder: ["Rattata", "Rattata-Alola", "Rattata-Delta"],
+	},
+	rattatadelta: {
+		num: 19,
+		name: "Rattata-Delta",
+		baseSpecies: "Rattata",
+		forme: "Delta",
+		types: ["Grass", "Normal"],
+		baseStats: {hp: 40, atk: 27, def: 34, spa: 40, spd: 42, spe: 70},
+		abilities: {0: "Run Away", 1: "Thick Fat", H: "Technician"},
+		heightm: 0.3,
+		weightkg: 3.5,
+		color: "Green",
+		evos: ["Raticate-Delta"],
+		eggGroups: ["Field"],
+	},
+	raticate: {
+		inherit: true,
+		otherFormes: ["Raticate-Alola", "Raticate-Delta"],
+		formeOrder: ["Raticate", "Raticate-Alola", "Raticate-Delta"],
+	},
+	raticatedelta: {
+		num: 20,
+		name: "Raticate-Delta",
+		baseSpecies: "Raticate",
+		forme: "Delta",
+		types: ["Grass", "Electric"],
+		baseStats: {hp: 85, atk: 42, def: 66, spa: 70, spd: 88, spe: 62},
+		abilities: {0: "Minus", 1: "Thick Fat", H: "Technician"},
+		heightm: 0.7,
+		weightkg: 18.5,
+		prevo: "Rattata-Delta",
+		evoLevel: 20,
+		evoCondition: "during day",
+		eggGroups: ["Field"],
+	},
+	//#endregion
+
 	//#region Sableye-Mega
 	sableye: {
 		inherit: true,
@@ -81,6 +213,35 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		eggGroups: ["Human-Like"],
 	},
 	//#endregion
+
+	//#region Steelix-Delta
+	onix: {
+		inherit: true,
+		evos: ["Steelix", "Steelix-Delta"],
+	},
+	steelix: {
+		inherit: true,
+		otherFormes: ["Steelix-Mega", "Steelix-Delta"],
+		formeOrder: ["Steelix", "Steelix-Mega", "Steelix-Delta"],
+	},
+	steelixdelta: {
+		num: 208,
+		name: "Steelix-Delta",
+		baseSpecies: "Steelix",
+		forme: "Delta",
+		types: ["Ground", "Psychic"],
+		baseStats: {hp: 85, atk: 55, def: 65, spa: 75, spd: 200, spe: 30},
+		abilities: {0: "Overcoat", 1: "Telepathy", H: "Regenerator"},
+		heightm: 9.2,
+		weightkg: 400,
+		prevo: "Onix",
+		evoType: "trade",
+		evoItem: "Shulker Shell",
+		eggGroups: ["Mineral"],
+
+	},
+	//#endregion
+
 	//#region Wooper-Delta & Quaxolotl
 	wooper: { // Adjusting Wooper's Evos
 		inherit: true,
@@ -115,6 +276,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		eggGroups: ["Water 1", "Fairy"],
 	},
 	//#endregion
+
 	//#region Yanfern & Yanmellia
 	yanfern: {
 		num: 2005,
@@ -143,4 +305,5 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		eggGroups: ["Grass", "Flying"],
 	}
 	//#endregion
+
 };

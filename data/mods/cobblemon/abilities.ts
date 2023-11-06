@@ -1,4 +1,33 @@
 export const Abilities: {[k: string]: ModdedAbilityData} = {
+	precedence: {
+		onModifyDamage(damage, source, target, move) {
+			if(move.priority > 0.1) {
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Precedence",
+		shortDesc: "Priority moves used by this Pokemon deals 50% more damage.",
+		rating: 3,
+		num: 113,
+	},
+	pureguise: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, pokemon, target, move) {
+			if(pokemon.hp >= pokemon.maxhp) {
+				return this.chainModify(1.3);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, pokemon, targert, move) {
+			if(pokemon.hp >= pokemon.maxhp) {
+				return this.chainModify(1.3);
+			}
+		},
+		name: "Pure Guise",
+		shortDesc: "Atk and Sp.Atk will be increased by 1.3x when at Max Hp.",
+		rating: 5,
+		num: 92,
+	},
 	strongpsyche: {
 		onModifySpAPriority: 5,
 		onModifySpA(atk, source, target, move) {
