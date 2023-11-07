@@ -67,7 +67,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 	aegislashdeltablade: {
 		num: 681,
 		name: "Aegislash-Delta-Blade",
-		baseSpecies: "Aegislash-Delta",
+		baseSpecies: "Aegislash",
 		forme: "Blade",
 		types: ["Steel", "Fire"],
 		baseStats: {hp: 85, atk: 125, def: 45, spa: 125, spd: 45, spe: 75},
