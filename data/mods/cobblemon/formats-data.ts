@@ -1,4 +1,7 @@
 export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
+	aegislashdelta: {
+		tier: "OU",
+	},
 	wooperdelta: {
 		tier: "LC",
 	},
