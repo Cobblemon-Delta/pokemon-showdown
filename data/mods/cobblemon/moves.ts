@@ -19,20 +19,6 @@ export const Moves: {[moveid: string]: ModdedMoveData} = {
 		contestType: "Tough",
 		shortDesc: "20% chance to lower the target's Def by 1 stage.",
 	},
-	decisivebolt: {
-		num: 10000,
-		accuracy: 100,
-		basePower: 40,
-		category: "Special",
-		name: 'Decisive Bolt',
-		pp: 5,
-		priority: 2,
-		flags: { contact: 1, protect: 1, mirror: 1 },
-		secondary: null,
-		target: "normal",
-		type: "Electric",
-		contestType: "Cool",
-	},
 	colddeparture: {
 		num: 10004,
 		accuracy: 100,
@@ -55,6 +41,133 @@ export const Moves: {[moveid: string]: ModdedMoveData} = {
 		zMove: { effect: "healreplacement" },
 		contestType: "Cool",
 		shortDesc: "Lowers the target's Defense, Special Defense, and Speed by 1 stage; Switches Out.",
+	},
+	decisivebolt: {
+		num: 10000,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: 'Decisive Bolt',
+		pp: 5,
+		priority: 2,
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		contestType: "Cool",
+	},
+	enflame: {
+		num: 20006,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		isNonstandard: "Past",
+		name: "Enflame",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, contact: 1},
+		secondary: null,
+		onTry(source) {
+			if (source.species.baseForme === "Aegislash") return;
+			this.attrLastMove("[still]");
+			this.hint("Only a Pokemon whose form is Aegislash-Delta or Aegislash-Delta-Blade can use this move.");
+			return null;
+		},onModifyMove(move, pokemon) {
+			// Already defaults to Status for the condition, so no need for a Aegislash-Delta check.
+			if(pokemon.species.name !== "Aegislash-Delta-Blade") return;
+			move.target = "normal";
+			move.basePower = 100;
+			move.category =
+				// No need for an if condition here.
+				// We can do a conditional variable declartion here using ? :.
+				(pokemon.getStat("atk", false, true) > pokemon.getStat("spa", false, true)) ?
+					"Physical" : "Special";
+		},
+		onHit(pokemon) {
+			// We are only checking if Aegislash-Delta exist.
+			// We can just check if it isn't, and if true, then we just return.
+			// Makes this code cleaner.
+			if (pokemon.species.name !== "Aegislash-Delta") return;
+			
+			let factor = 0.25;
+			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+			if (!success) {
+				this.add("-fail", pokemon, "heal");
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
+		target: "self",
+		type: "Fire",
+	},
+	infernalshield: {
+		num: 20005,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Infernal Shield",
+		pp: 5,
+		priority: 4,
+		flags: { noassist: 1, failcopycat: 1, failinstruct: 1 },
+		stallingMove: true,
+		volatileStatus: "infernalshield",
+		onPrepareHit(pokemon) {
+			return !!this.queue.willAct() && this.runEvent('StallMove', pokemon);
+		},
+		onHit(pokemon) {
+			pokemon.addVolatile("stall");
+		},
+		condition: {
+			duration: 1,
+			onStart(target) {
+				this.add("-singleturn", target, "Protect");
+			},
+			onTryHitPriority: 3,
+			onTryHit(target, source, move) {
+				if (!move.flags["protect"] || move.category === "Status") {
+					if (["gmaxoneblow", "gmaxrapidflow"].includes(move.id)) return;
+					if (move.isZ || move.isMax) target.getMoveHitData(move).zBrokeProtect = true;
+					return;
+				}
+				if (move.smartTarget) move.smartTarget = false;
+				else this.add("-activate", target, "move: Infernal Shield");
+
+				const lockedmove = source.getVolatile("lockedmove");
+				if (lockedmove && (source.volatiles["lockedmove"].duration === 2))
+					delete source.volatiles["lockedmove"];
+
+				if (this.checkMoveMakesContact(move, source, target)) 
+					source.trySetStatus("brn", target);
+
+				return this.NOT_FAIL;
+			},
+			onHit(target, source, move) {
+				if (move.isZOrMaxPowered && this.checkMoveMakesContact(move, source, target))
+					source.trySetStatus("brn", target);
+			},
+		},
+		secondary: null,
+		target: "self",
+		type: "Fire",
+		contestType: "Cool",
+	},
+	wretchedstab: {
+		num: 20007,
+		accuracy: 100,
+		basePower: 20,
+		basePowerCallback(pokemon, target, move) {
+			return 20 + 5 * pokemon.side.totalFainted;
+		},
+		category: "Physical",
+		name: "Wretched Stab",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1 },
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+		shortDesc: "The user attacks to avenge its allies. The more defeated allies there are in the party, the stronger the move. Hits 2-5 times."
 	},
 	// decisivebolt: {
 	// 	num: 10000,

@@ -1,4 +1,38 @@
 export const Abilities: {[k: string]: ModdedAbilityData} = {
+	blazingswap: {
+		onModifyMove(move, attacker, defender) {
+			if (attacker.species.baseSpecies !== "Aegislash-Delta" || attacker.transformed) return;
+			if (move.category === "Status" && move.id !== "infernalshield") return;
+			const targetForme = move.id === "infernalshield" ? "Aegislash-Delta" : "Aegislash-Delta-Blade";
+			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+		},
+		isPermanent: true,
+		name: "Blazing Swap",
+		shortDesc: "If the user is Aegislash-Delta, using an damaging move will change to Blade forme. Using Infernal Shield, will change to Shield Form.",
+		rating: 4,
+		num: 176,
+	},
+	direambush: {
+		onBasePowerPriority: 21,
+		onBasePower(basePower, pokemon) {
+			let boosted = true;
+			for (const target of this.getAllActive()) {
+				if (target == pokemon) continue;
+				if (this.queue.willMove(target)) {
+					boosted = false;
+					break;
+				}
+			}
+			if (boosted) {
+				this.debug("Dire Ambush boost");
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		name: "Dire Ambush",
+		shortDesc: "If this Pokemon moves before the target, move's power is increased by 30%.",
+		rating: 2.5,
+		num: 148,
+	},
 	fatalize: {
 		onModifyTypePriority: -5,
 		onModifyType(move, pokemon) {
@@ -18,6 +52,22 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		shortDesc: "Causes all Normal-type moves to be Dark-type and gains 1.2x more power.",
 		rating: 4,
 		num: 184,
+	},
+	guardian: {
+		onUpdate(pokemon) {
+			if(pokemon.status) {
+				this.add('-activate', pokemon, 'ability: Guardian');
+				pokemon.cureStatus();
+			}
+		},
+		onSetStatus(status, target, source, effect) {
+			if((effect as Move).status) this.add('-immune', target, '[from] ability: Guardian');
+			return false;
+		},
+		name: "Guardian",
+		shortDesc: "Immune To Status Conditions; Can't be flinched.",
+		rating: 4,
+		num: 185,
 	},
 	precedence: {
 		onModifyDamage(damage, source, target, move) {
