@@ -8,7 +8,10 @@ export class CreatePokemonLearnset {
 	constructor(private name: string, private dex: ModdedDex) {}
 
 	private createMoveSection(name: string) {
-		if (!this.dex.modData("Learnsets", this.name).learnsets[name])
+		if (this.dex.modData("Learnsets", this.name).learnsets == undefined) {
+			this.dex.modData("Learnsets", this.name).learnsets = {};
+		}
+		if(this.dex.modData("Learnsets", this.name).learnsets[name] == undefined)
 			this.dex.modData("Learnsets", this.name).learnsets[name] = [];
 	}
 	public addLevelMove(name: string, level: number = 1) {
