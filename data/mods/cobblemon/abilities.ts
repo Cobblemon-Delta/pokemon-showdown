@@ -12,6 +12,26 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		rating: 4,
 		num: 176,
 	},
+	conductor: {
+		onModifyPriorityPriority: 4,
+		onModifyPriority(priority, pokemon, target, move) {
+			if (["Instruct", "Encore", "Tailwind"].includes(move.name)) return priority + 1;
+		},
+		onTryHit(target, source, move) {
+			if (!(target !== source && move.flags["sound"])) return;
+			this.add("-immune", target, "[from] ability: Conductor");
+			return null;
+		},
+		onAllyTryHitSide(target, source, move) {
+			if(!move.flags["sound"]) return;
+			this.add("-immune", this.effectState.target, "[from] ability: Conductor");
+		},
+		isBreakable: true,
+		name: "Conductor",
+		shortDesc: "User is immune to Sound Moves; Gain priority when using Instruct, Encore, and Tailwind.",
+		rating: 2,
+		num: 43,
+	},
 	direambush: {
 		onBasePowerPriority: 21,
 		onBasePower(basePower, pokemon) {
@@ -53,21 +73,35 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		rating: 4,
 		num: 184,
 	},
-	guardian: {
-		onUpdate(pokemon) {
-			if(pokemon.status) {
-				this.add('-activate', pokemon, 'ability: Guardian');
-				pokemon.cureStatus();
-			}
+	hocuspocus: {
+		onStart(pokemon) {
+			if (this.effectState.hocus) return;
+			this.field.addPseudoWeather("trickroom");
+			this.effectState.hocus = true;
 		},
-		onSetStatus(status, target, source, effect) {
-			if((effect as Move).status) this.add('-immune', target, '[from] ability: Guardian');
-			return false;
+		onFractionalPriorityPriority: -1,
+		onFractionalPriority(priority, pokemon, target, move) {
+			if (!(this.field.getPseudoWeather("trickroom") && move.category === "Status")) return;
+			return -0.1;
 		},
-		name: "Guardian",
-		shortDesc: "Immune To Status Conditions; Can't be flinched.",
+		name: "Hocus Pocus",
+		shortDesc: "Upon switch-in, sets up/ removes Trick Room. Can be used once per battle. Status moves used by this Pokemon in Trick Room will go last.",
 		rating: 4,
-		num: 185,
+		num: 226,
+	},
+	performer: {
+		onTryHit(target, source, move) {
+			if(!(target !== source && move.flags["sound"])) return;
+			this.add("-immune", target, "[from] ability: Performer");
+			return null;
+		},
+		onAllyTryHitSide(target, source, move) {
+			if(!move.flags["sound"]) return;
+			this.add("-immune", this.effectState.target, "[from] ability: Performer");
+		},
+		name: "Performer",
+		rating: 2,
+		num: 43,
 	},
 	precedence: {
 		onModifyDamage(damage, source, target, move) {
@@ -98,6 +132,68 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		rating: 5,
 		num: 92,
 	},
+	sacredbody: {
+		onDamagingHit(damage, target, source, move) {
+			if (!this.checkMoveMakesContact(move, source, target)) return;
+			let announced = false;
+			for (const pokemon of [target, source]) {
+				if (pokemon.volatiles["sacredbody"]) continue;
+				if (!announced) {
+					this.add("-ability", target, "Sacred Body");
+					announced = true;
+				}
+			}
+		},
+		onTryHitField(target, source, move) {
+			let result = false;
+			let message = false;
+			for (const pokemon of this.getAllActive()) {
+				if (this.runEvent("Invulnerability", pokemon, source, move) === false) {
+					this.add("-miss", source, pokemon);
+					result = true;
+				} else if (this.runEvent("TryHit", pokemon, source, move) === null) {
+					result = true;
+				} else if (!pokemon.volatiles["sacredbody"]) {
+					pokemon.addVolatile("sacredbody");
+					this.add("-start", pokemon, "scared3", "[silent]");
+					result = true;
+					message = true;
+				}
+			}
+			if (!result) return false;
+			if (message) this.add("-fieldactivate", "move: Sacred Body");
+		},
+		condition: {
+			duration: 4,
+			onEnd(target) {
+				this.add("-start", target, "sacred0")
+			},
+			onResidualOrder: 23,
+			onResidual(pokemon) {
+				const duration = pokemon.volatiles["sacredbody"].duration;
+				this.add("-start", pokemon, "sacred" + duration);
+			}
+		},
+		name: "Sacred Body",
+		rating: 1,
+		num: 253,
+	},
+	shielded: {
+		onUpdate(pokemon) {
+			if(pokemon.status) {
+				this.add('-activate', pokemon, 'ability: Guardian');
+				pokemon.cureStatus();
+			}
+		},
+		onSetStatus(status, target, source, effect) {
+			if((effect as Move).status) this.add('-immune', target, '[from] ability: Guardian');
+			return false;
+		},
+		name: "Shielded",
+		shortDesc: "Immune To Status Conditions; Can't be flinched.",
+		rating: 4,
+		num: 185,
+	},
 	strongpsyche: {
 		onModifySpAPriority: 5,
 		onModifySpA(atk, source, target, move) {
@@ -107,6 +203,52 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		rating: 5,
 		num: 37,
 		shortDesc: "Doubles the special attack of the Pokemon.",
+	},
+	surge: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (!(move.type === "Electric" && attacker.hp <= (attacker.maxhp / 3))) return;
+			this.debug("Surge boost");
+			return this.chainModify(1.5);
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (!(move.type === "Electric" && attacker.hp <= (attacker.maxhp / 3))) return;
+			this.debug("Surge boost");
+			return this.chainModify(1.5);
+		},
+		name: "Surge",
+		shortDesc: "Boost this Pokemon's Attack and Sp. Attack by 1.5x when using Electric-type moves and at 1/3 or less hp.",
+		rating: 2,
+		num: 66,
+	},
+	taproot: {
+		onSetStatus(status, target, source, effect) {
+			if (target.volatiles["ingrain"]) return false;
+		},
+		onTryHealPriority: 1,
+		onTryHeal(damage, target, source, effect) {
+			const heals = ["drain", "leechseed", "ingrain", "aquaring", "strengthsap"];
+			if (heals.includes(effect.id)) return this.chainModify([5324, 4096]);
+		},
+		onStart(pokemon) {
+			for (const ally of pokemon.alliesAndSelf()) {
+				if (!(pokemon.volatiles["ingrain"] && ["psn", "tox", "slp", "par", "frz", "brn"].includes(ally.status))) return;
+
+				this.add("-activate", pokemon, "ability: Tap Root");
+				ally.cureStatus();
+			}
+		},
+		onUpdate(pokemon) {
+			if(!(pokemon.volatiles["ingrain"] && ["psn", "tox", "slp", "par", "frz", "brn"].includes(pokemon.status))) return;
+
+			this.add("-activate", pokemon, "ability: Tap Root");
+			pokemon.cureStatus();
+		},
+		name: "Tap Root",
+		shortDesc: "Draining Moves, Leech Seed, Ingrain, and Aqua Ring has 30% more healing. Cannot be inflicted with Statuses when Ingrain.",
+		rating: 3,
+		num: 61,
 	},
 	// tangibility: {
 	// 	onModifyMovePriority: -5,
