@@ -8,4 +8,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	quaxolotl: {
 		tier: "OU",
 	},
+	spectreon: {
+		tier: "OU",
+	},
 };

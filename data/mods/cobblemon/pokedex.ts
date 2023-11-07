@@ -207,8 +207,22 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 			// Original Evos
 			"Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon", "Leafeon", "Glaceon", "Sylveon",
 			// New Evos
-			"Veneon", "Guardeon", "Brawleon", "Draceon", "Manteon", "Niveon",
+			"Spectreon", "Veneon", "Guardeon", "Brawleon", "Draceon", "Manteon", "Niveon",
 		],
+	},
+	spectreon: {
+		num: 10012,
+		name: "Spectreon",
+		types: ["Ghost"],
+		genderRatio: {M: 0.875, F: 0.125},
+		baseStats: {hp: 130, atk: 60, def: 65, spa: 110, spd: 65, spe: 95},
+		abilities: {0: "Cursed Body", H: "Tangibility"},
+		heightm: 1,
+		weightkg: 0.2,
+		prevo: "Eevee",
+		evoType: "useItem",
+		evoItem: "Dusk Stone",
+		eggGroups: ["Field"],
 	},
 	veneon: {
 		num: 10013,

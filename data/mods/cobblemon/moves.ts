@@ -151,6 +151,30 @@ export const Moves: {[moveid: string]: ModdedMoveData} = {
 		type: "Fire",
 		contestType: "Cool",
 	},
+	whiskaway: {
+		num: 10001,
+		accuracy: 100,
+		basePower: 65,
+		category: "Special",
+		name: "Whisk Away",
+		pp: 20,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		onBasePower(basePower, source, target, move) {
+			const item = target.getItem();
+			if (!this.singleEvent("TakeItem", item, target.itemState, target, target, move, item)) return;
+			if (item.id) return this.chainModify(1.5);
+		},
+		onAfterHit(target, source) {
+			if (!source.hp) return;
+			const item = target.takeItem();
+			if (item) this.add("-enditem", target, item.name, "[from] move: Whisk Away", "[of] " + source);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+		contestType: "Clever",
+	},
 	wretchedstab: {
 		num: 20007,
 		accuracy: 100,

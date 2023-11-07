@@ -1,12 +1,7 @@
 export const Learnsets: {[k: string]: ModdedLearnsetData} = {
-	wooperdelta: {
+	spectreon: {
 		learnset: {
 
-		}
-	},
-	quaxolotl: {
-		learnset: {
-
-		}
+		},
 	},
 }

@@ -222,6 +222,27 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		rating: 2,
 		num: 66,
 	},
+	tangibility: {
+		onModifyMovePriority: -5,
+		onModifyMove(move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) move.ignoreImmunity["Ghost"] = true;
+		},
+		onTryBoost(boost, target, source, effect) {
+			if(!(effect.name === "Intimidate" && boost.atk)) return;
+			delete boost.atk;
+			this.add("-fail", target, "unboost", "Attack", "[from] ability: Tangibility", "[of] " + target);
+		},
+		onModifyDamage(damage, source, target, move) {
+			if (!(target.getMoveHitData(move).typeMod < 0 && move.type === "Ghost")) return;
+			this.debug("Tangibility boost");
+			return this.chainModify(2);
+		},
+		name: "Tangibility",
+		shortDesc: "Non-Effective Ghost-type moves deal 2x more damage. Can hit Normal-Type Pokemon with Ghost-type moves.",
+		rating: 3,
+		num: 113,
+	},
 	taproot: {
 		onSetStatus(status, target, source, effect) {
 			if (target.volatiles["ingrain"]) return false;
