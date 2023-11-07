@@ -8,6 +8,7 @@ export class CreatePokemonLearnset {
 	constructor(private name: string, private dex: ModdedDex) {}
 
 	private createMoveSection(name: string) {
+		console.log(this.dex.modData("Learnsets", this.name));
 		if (this.dex.modData("Learnsets", this.name).learnsets == undefined) {
 			this.dex.modData("Learnsets", this.name).learnsets = {};
 		}
