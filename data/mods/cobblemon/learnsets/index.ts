@@ -7,6 +7,8 @@ import { LucaurusLearnset } from "./lucaurus";
 import { SableyeDeltaLearnset } from "./sableyedelta";
 import { YanfernLearnset } from "./yanfern";
 import { YanmelliaLearnset } from "./yanmellia";
+import { GibleDeltaLearnset } from "./gibledelta";
+import { GabiteDeltaLearnset } from "./gabitedelta";
 //#endregion
 
 //#region Template
@@ -41,4 +43,6 @@ export function LoadLearnsets(dex: ModdedDex) {
 	SableyeDeltaLearnset(dex);
 	YanfernLearnset(dex);
 	YanmelliaLearnset(dex);
+	GibleDeltaLearnset(dex);
+	GabiteDeltaLearnset(dex);
 }
