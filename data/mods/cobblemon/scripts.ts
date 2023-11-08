@@ -1,7 +1,9 @@
 import {CreatePokemonLearnset} from "./../../../tools/utils/create";
 import {
+	LucaurusLearnset,
 	QuaxolotlLearnset,
-	SpectreonLearnset, WooperDeltaLearnset
+	SpectreonLearnset,
+	WooperDeltaLearnset
 } from "./learnsets/index";
 export const Scripts: ModdedBattleScriptsData = {
 	gen: 9,
@@ -11,6 +13,7 @@ export const Scripts: ModdedBattleScriptsData = {
 		SpectreonLearnset(this);
 		WooperDeltaLearnset(this);
 		QuaxolotlLearnset(this);
+		LucaurusLearnset(this);
 		//#endregion Learnsets
 	},
 };

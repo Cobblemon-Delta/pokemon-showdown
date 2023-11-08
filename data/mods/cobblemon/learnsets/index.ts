@@ -1,7 +1,11 @@
 // Barrel File
+//#region Pokemon Learnset File
 import { SpectreonLearnset } from "./spectreon";
 import { WooperDeltaLearnset } from "./wooperdelta";
 import { QuaxolotlLearnset } from "./quaxolotl";
+import { LucaurusLearnset } from "./lucaurus";
+//#endregion
+
 //#region Template
 import {ModdedDex} from "./../../../../sim/dex";
 import {CreatePokemonLearnset} from "./../../../../tools/utils/create";
@@ -31,4 +35,5 @@ export {
 	SpectreonLearnset,
 	WooperDeltaLearnset,
 	QuaxolotlLearnset,
+	LucaurusLearnset
 };

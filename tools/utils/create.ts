@@ -23,17 +23,38 @@ export class CreatePokemonLearnset {
 		this.dex.modData("Learnsets", this.name).learnset[name].push(`9L${level}`);
 		return this;
 	}
+	public addTMMoves(...args: string[]) {
+		for(const move of args) {
+			const name = this.PrefixMoveName(move);
+			this.createMoveSection(name);
+			this.dex.modData("Learnsets", this.name).learnset[name].push('9M');
+		}
+	}
 	public addTMMove(name: string) {
 		name = this.PrefixMoveName(name);
 		this.createMoveSection(name);
 		this.dex.modData("Learnsets", this.name).learnset[name].push(`9M`);
 		return this;
 	}
+	public addEggMoves(...args: string[]) {
+		for(const move of args) {
+			const name = this.PrefixMoveName(move);
+			this.createMoveSection(name);
+			this.dex.modData("Learnsets", this.name).learnset[name].push('9E');
+		}
+	}
 	public addEggMove(name: string) {
 		name = this.PrefixMoveName(name);
 		this.createMoveSection(name);
 		this.dex.modData("Learnsets", this.name).learnset[name].push(`9E`);
 		return this;
+	}
+	public addTutorMoves(...args: string[]) {
+		for(const move of args) {
+			const name = this.PrefixMoveName(move);
+			this.createMoveSection(name);
+			this.dex.modData("Learnsets", this.name).learnset[name].push('9T');
+		}
 	}
 	public addTutorMove(name: string) {
 		name = this.PrefixMoveName(name);
