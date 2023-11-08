@@ -90,8 +90,25 @@ export function LucaurusLearnset(dex: ModdedDex) {
 		// Tutor Moves
 		////////////////////////////////////////
 		pokemon
+				.addTutorMoves(
+					'Knock Off',
+					'Sucker Punch',
+					'Spite',
+					'Iron Head',
+					'Iron Tail',
+					'Foul Play',
+					'Dark Pulse',
+				);
 		/////////////////////////////////////////
 		// Egg Moves
 		////////////////////////////////////////
 		pokemon
+					.addEggMoves(
+						'Bite',
+						'Circle Throw',
+						'Cross Chop',
+						'Detect',
+						'Hight Jump Kick',
+						'Howl',
+					);
 }

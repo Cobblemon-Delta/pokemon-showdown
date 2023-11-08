@@ -19,4 +19,19 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 
 		}
 	},
+	sableyedelta: {
+		learnset: {
+
+		}
+	},
+	yanfern: {
+		learnset: {
+
+		}
+	},
+	yanmellia: {
+		learnset: {
+
+		}
+	},
 }
