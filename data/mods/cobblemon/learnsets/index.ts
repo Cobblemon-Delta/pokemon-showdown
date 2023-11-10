@@ -9,6 +9,11 @@ import { YanfernLearnset } from "./yanfern";
 import { YanmelliaLearnset } from "./yanmellia";
 import { GibleDeltaLearnset } from "./gibledelta";
 import { GabiteDeltaLearnset } from "./gabitedelta";
+import { GarchompDeltaLearnset } from "./garchompdelta";
+import { SteelixDeltaLearnset } from "./steelixdelta";
+import { GorochuLearnset } from "./gorochu";
+import { RaticateDeltaLearnset } from "./raticatedelta";
+import { RattataDeltaLearnset } from "./rattatadelta";
 //#endregion
 
 //#region Template
@@ -45,4 +50,9 @@ export function LoadLearnsets(dex: ModdedDex) {
 	YanmelliaLearnset(dex);
 	GibleDeltaLearnset(dex);
 	GabiteDeltaLearnset(dex);
+	GarchompDeltaLearnset(dex);
+	SteelixDeltaLearnset(dex);
+	GorochuLearnset(dex);
+	RaticateDeltaLearnset(dex);
+	RattataDeltaLearnset(dex);
 }
