@@ -108,7 +108,7 @@ export default function(dex: ModdedDex) {	const pokemon = new CreatePokemonLearn
 						'Circle Throw',
 						'Cross Chop',
 						'Detect',
-						'Hight Jump Kick',
+						'HighJumpKick',
 						'Howl',
 					);
 }
