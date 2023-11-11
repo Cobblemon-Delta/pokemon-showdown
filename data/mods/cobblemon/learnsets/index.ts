@@ -47,7 +47,7 @@ export async function LoadLearnsets(dex: ModdedDex) {
 
 	for (let pokemon of pokemons) {
 		const { default: mod } = await import(`./${pokemon}.js`);
-		console.log(mod);
+		console.log(pokemon);
 		mod.default(dex);
 	}
 }
