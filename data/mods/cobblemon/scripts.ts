@@ -5,7 +5,7 @@ export const Scripts: ModdedBattleScriptsData = {
 	init() {
 		//#region Learnset
 		(async () => {
-			await LoadLearnsets
+			await LoadLearnsets(this);
 		})()
 		//#endregion
 	},
