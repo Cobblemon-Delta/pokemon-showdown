@@ -1,6 +1,7 @@
-import {ModdedDex} from "./../../../../sim/dex";
-import {CreatePokemonLearnset} from "./../../../../tools/utils/create";
-export function SpectreonLearnset(dex: ModdedDex) {
+import { CreatePokemonLearnset } from "../../../../tools/utils/create";
+import { ModdedDex } from "../../../../sim/dex";
+
+export default function(dex: ModdedDex) {
 	const spectreon = new CreatePokemonLearnset("spectreon", dex)
 		/////////////////////////////////////////
 		// Level Up Moves

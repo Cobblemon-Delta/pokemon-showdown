@@ -1,21 +1,7 @@
-import {ModdedDex} from "./../../../../sim/dex";
-import {CreatePokemonLearnset} from "./../../../../tools/utils/create";
-export function NewLearnset(dex: ModdedDex) {
-	const pokemon = new CreatePokemonLearnset("greninjadelta", dex);
-		/////////////////////////////////////////
-		// Level Up Moves
-		////////////////////////////////////////
-		pokemon
-		/////////////////////////////////////////
-		// TM/HM Moves
-		////////////////////////////////////////
-		pokemon
-		/////////////////////////////////////////
-		// Tutor Moves
-		////////////////////////////////////////
-		pokemon
-		/////////////////////////////////////////
-		// Egg Moves
-		////////////////////////////////////////
-		pokemon
+import { ModdedDex } from "./../../../../sim/dex";
+import { CreatePokemonLearnset } from "../../../../tools/utils/create";
+export class NewLearnset extends CreatePokemonLearnset {
+	constructor(dex: ModdedDex) {
+		super ("", dex);
+	}
 }
