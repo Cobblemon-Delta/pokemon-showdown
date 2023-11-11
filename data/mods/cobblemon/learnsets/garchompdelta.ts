@@ -1,7 +1,8 @@
 import { CreatePokemonLearnset } from "../../../../tools/utils/create";
 import { ModdedDex } from "../../../../sim/dex";
 
-export default function(dex: ModdedDex) {	const pokemon = new CreatePokemonLearnset("placeholder", dex);
+export default function(dex: ModdedDex) {	
+	const pokemon = new CreatePokemonLearnset("garchompdelta", dex);
 		/////////////////////////////////////////
 		// Level Up Moves
 		////////////////////////////////////////
