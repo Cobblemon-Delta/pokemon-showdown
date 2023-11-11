@@ -28,7 +28,21 @@ export default function(dex: ModdedDex) {
 
 export async function LoadLearnsets(dex: ModdedDex) {
 	const pokemons = [
-		"spectreon"
+		"gabitedelta",
+		"garchompdelta",
+		"gibledelta",
+		"gorochu",
+		"greninjadelta",
+		"lucaurus",
+		"quaxolotl",
+		"raticatedelta",
+		"rattatadelta",
+		"sableyedelta",
+		"spectreon",
+		"steelixdelta",
+		"wooperdelta",
+		"yanfern",
+		"yanmellia",
 	];
 
 	for (let pokemon of pokemons) {

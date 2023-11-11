@@ -1,7 +1,7 @@
-import {ModdedDex} from "./../../../../sim/dex";
-import {CreatePokemonLearnset} from "./../../../../tools/utils/create";
-export function YanmelliaLearnset(dex: ModdedDex) {
-	const pokemon = new CreatePokemonLearnset("yanmellia", dex);
+import { CreatePokemonLearnset } from "../../../../tools/utils/create";
+import { ModdedDex } from "../../../../sim/dex";
+
+export default function(dex: ModdedDex) {	const pokemon = new CreatePokemonLearnset("yanmellia", dex);
 		/////////////////////////////////////////
 		// Level Up Moves
 		////////////////////////////////////////

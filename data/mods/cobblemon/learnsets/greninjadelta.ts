@@ -1,7 +1,23 @@
-import { ModdedDex } from "./../../../../sim/dex";
 import { CreatePokemonLearnset } from "../../../../tools/utils/create";
-export class NewLearnset extends CreatePokemonLearnset {
-	constructor(dex: ModdedDex) {
-		super ("", dex);
-	}
+import { ModdedDex } from "../../../../sim/dex";
+
+export default function(dex: ModdedDex) {
+	const pokemon = new CreatePokemonLearnset("", dex);
+
+	/////////////////////////////////////////
+	// Level Moves
+	////////////////////////////////////////
+	pokemon
+	/////////////////////////////////////////
+	// TM/HM Moves
+	////////////////////////////////////////
+	pokemon
+	/////////////////////////////////////////
+	// Tutor Moves
+	////////////////////////////////////////
+	pokemon
+	/////////////////////////////////////////
+	// Egg Moves
+	////////////////////////////////////////
+	pokemon
 }

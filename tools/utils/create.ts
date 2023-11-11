@@ -17,6 +17,14 @@ export class CreatePokemonLearnset {
 		if(this.dex.modData("Learnsets", this.name).learnset[name] == undefined)
 			this.dex.modData("Learnsets", this.name).learnset[name] = [];
 	}
+	public addLevelMoves(moves: [string, number][]) {
+		for(const move of moves) {
+			let name = move[0];
+			name = this.PrefixMoveName(name);
+			this.createMoveSection(name);
+			this.dex.modData("Learnsets", this.name).learnset[name].push(`9L${move[1]}`);
+		}
+	}
 	public addLevelMove(name: string, level: number = 1) {
 		name = this.PrefixMoveName(name);
 		this.createMoveSection(name);

@@ -1,7 +1,7 @@
-import {ModdedDex} from "./../../../../sim/dex";
-import {CreatePokemonLearnset} from "./../../../../tools/utils/create";
-export function GabiteDeltaLearnset(dex: ModdedDex) {
-	const pokemon = new CreatePokemonLearnset("gabitedelta", dex);
+import { CreatePokemonLearnset } from "../../../../tools/utils/create";
+import { ModdedDex } from "../../../../sim/dex";
+
+export default function(dex: ModdedDex) {	const pokemon = new CreatePokemonLearnset("gabitedelta", dex);
 		/////////////////////////////////////////
 		// Level Up Moves
 		////////////////////////////////////////
