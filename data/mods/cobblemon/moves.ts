@@ -100,6 +100,26 @@ export const Moves: {[moveid: string]: ModdedMoveData} = {
 		target: "self",
 		type: "Fire",
 	},
+	iaislash: {
+		num: 10003,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Iai Slash",
+		pp: 5,
+		priority: 1,
+		flags: { contact: 1, protect: 1, mirror: 1 },
+		onTry(source, target) {
+			const action = this.queue.willMove(target);
+			const move = action?.choice === "move" ? action.move : null;
+			if (!move || move.category === "Status" && move.id !== "mefirst" || target.volatiles["mustrecharge"])
+				return false;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+		contestType: "Clever",
+	},
 	infernalshield: {
 		num: 20005,
 		accuracy: 100,

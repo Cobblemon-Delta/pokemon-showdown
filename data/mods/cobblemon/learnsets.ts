@@ -1,4 +1,5 @@
 export const Learnsets: {[k: string]: ModdedLearnsetData} = {
+	dragetsu: {learnset: {}},
 	gabitedelta: {learnset: {}},
 	garchompdelta: {learnset: {}},
 	gibledelta: {learnset: {}},

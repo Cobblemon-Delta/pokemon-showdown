@@ -28,6 +28,7 @@ export default function(dex: ModdedDex) {
 
 export async function LoadLearnsets(dex: ModdedDex) {
 	const pokemons = [
+		"dragetsu",
 		"gabitedelta",
 		"garchompdelta",
 		"gibledelta",
