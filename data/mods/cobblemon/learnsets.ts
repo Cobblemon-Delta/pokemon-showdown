@@ -34,4 +34,29 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 
 		}
 	},
+	gibitedelta: {
+		learnset: {}
+	},
+	gabitedelta: {
+		learnset: {}
+	},
+	garchompdelta: {
+		learnset: {}
+	},
+	gorochu: {
+		learnset: {}
+	},
+	greninjadelta: {
+		learnset: {}
+	},
+	raticatedelta: {
+		learnset: {}
+	},
+	rattatadelta: {
+		learnset: {}
+	},
+	steelixdelta: {
+		learnset: {}
+	},
+	
 }
