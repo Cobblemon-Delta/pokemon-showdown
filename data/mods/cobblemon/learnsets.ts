@@ -34,7 +34,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 
 		}
 	},
-	gibitedelta: {
+	gibledelta: {
 		learnset: {}
 	},
 	gabitedelta: {
@@ -58,5 +58,5 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	steelixdelta: {
 		learnset: {}
 	},
-	
+
 }
