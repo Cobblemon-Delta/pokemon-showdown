@@ -755,6 +755,27 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 	},
 	//#endregion
 
+	//#region Tinkatuff-Delta
+	tinkatuff: {
+		inherit: true,
+		otherFormes: ["Tinkatuff-Delta"],
+		formeOrder: ["Tinkatuff", "Tinkatuff-Delta"],
+	},
+	tinkatuffdelta: {
+		num: 958,
+		name: "Tinkatuff-Delta",
+		baseSpecies: "Tinkatuff",
+		forme: "Delta",
+		types: ["Fairy", "Water"],
+		baseStats: {hp: 85, atk: 85, def: 95, spa: 80, spd: 67, spe: 94},
+		abilities: {0: "Suction Cups", 1: "Steelworker", H: "Rain Dish"},
+		heightm: 0.7,
+		weightkg: 218.5,
+		color: "Blue",
+		eggGroups: ["Fairy"],
+	},
+	//#endregion
+
 	//#region Typhlosion-Delta's Evolution Line
 	cyndaquil: {
 		inherit: true,

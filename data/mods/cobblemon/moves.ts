@@ -100,6 +100,32 @@ export const Moves: {[moveid: string]: ModdedMoveData} = {
 		target: "self",
 		type: "Fire",
 	},
+	gigatonanchor: {
+		num: 20008,
+		accuracy: 100,
+		basePower: 160,
+		category: "Physical",
+		name: "Gigaton Anchor",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1 },
+		onDisableMove(pokemon) {
+			if (pokemon.lastMove?.id === "gigatonanchor")
+				pokemon.disableMove("gigatonanchor");
+		},
+		beforeMoveCallback(pokemon) {
+			if (pokemon.lastMove?.id === "gigatonanchor")
+				pokemon.addVolatile("gigatonanchor");
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.removeVolatile("gigatonanchor"))
+				this.add('-hint', "Some effects can force a pokemon to use Gigaton ANchor again in a row.");
+		},
+		condition: {},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+	},
 	iaislash: {
 		num: 10003,
 		accuracy: 100,
