@@ -121,7 +121,6 @@ export const Moves: {[moveid: string]: ModdedMoveData} = {
 			if (pokemon.removeVolatile("gigatonanchor"))
 				this.add('-hint', "Some effects can force a pokemon to use Gigaton ANchor again in a row.");
 		},
-		condition: {},
 		secondary: null,
 		target: "normal",
 		type: "Steel",
