@@ -33,7 +33,7 @@ export async function LoadLearnsets(dex: ModdedDex) {
 		"garchompdelta",
 		"gibledelta",
 		"gorochu",
-		"greninjadelta",
+		// "greninjadelta",
 		"lucaurus",
 		"quaxolotl",
 		"raticatedelta",
