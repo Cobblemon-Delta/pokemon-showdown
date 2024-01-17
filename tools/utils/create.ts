@@ -5,7 +5,9 @@ export class CreatePokemon {
 
 export class CreatePokemonLearnset {
 	
-	constructor(private name: string, private dex: ModdedDex) {}
+	constructor(private name: string, private dex: ModdedDex) {
+		console.log(name);
+	}
 	private PrefixMoveName(name: string) {
 		return name.includes(" ") ? name.toLowerCase().replace(" ", "") : name.toLowerCase();
 	}
