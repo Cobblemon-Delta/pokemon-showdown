@@ -129,7 +129,7 @@ export const commands: Chat.ChatCommands = {
 			return this.errorReply(`The PotD is already set to ${species.name}`);
 		}
 		if (!species.exists) return this.errorReply(`Pokemon "${target}" not found.`);
-		if (!Dex.species.getLearnset(species.id)) {
+		if (!Dex.species.getFullLearnset(species.id).length) {
 			return this.errorReply(`That Pokemon has no learnset and cannot be used as the PotD.`);
 		}
 		Config.potd = species.id;
@@ -986,7 +986,7 @@ export const commands: Chat.ChatCommands = {
 			Object.entries(Dex.data.Learnsets).map(([id, entry]) => (
 				`\t${id}: {learnset: {\n` +
 				Utils.sortBy(
-					Object.entries(Dex.species.getLearnsetData(id as ID)),
+					Object.entries(Dex.species.getLearnsetData(id as ID).learnset!),
 					([moveid]) => moveid
 				).map(([moveid, sources]) => (
 					`\t\t${moveid}: ["` + sources.join(`", "`) + `"],\n`
@@ -1359,7 +1359,7 @@ export const commands: Chat.ChatCommands = {
 		if (err) {
 			Rooms.global.notifyRooms(
 				['staff', 'development'],
-				`|c|&|/log ${user.name} used /updateloginserver - but something failed while updating.`
+				`|c|${user.getIdentity()}|/log ${user.name} used /updateloginserver - but something failed while updating.`
 			);
 			return this.errorReply(err.message + '\n' + err.stack);
 		}
@@ -1376,7 +1376,7 @@ export const commands: Chat.ChatCommands = {
 			this.errorReply(`FAILED. Conflicts were found while updating - the restart was aborted.`);
 		}
 		Rooms.global.notifyRooms(
-			['staff', 'development'], `|c|&|/log ${message}`
+			['staff', 'development'], `|c|${user.getIdentity()}|/log ${message}`
 		);
 	},
 	updateloginserverhelp: [
@@ -1392,7 +1392,7 @@ export const commands: Chat.ChatCommands = {
 		if (err) {
 			Rooms.global.notifyRooms(
 				['staff', 'development'],
-				`|c|&|/log ${user.name} used /updateclient - but something failed while updating.`
+				`|c|${user.getIdentity()}|/log ${user.name} used /updateclient - but something failed while updating.`
 			);
 			return this.errorReply(err.message + '\n' + err.stack);
 		}
@@ -1409,7 +1409,7 @@ export const commands: Chat.ChatCommands = {
 			this.errorReply(`FAILED. Conflicts were found while updating.`);
 		}
 		Rooms.global.notifyRooms(
-			['staff', 'development'], `|c|&|/log ${message}`
+			['staff', 'development'], `|c|${user.getIdentity()}|/log ${message}`
 		);
 	},
 	updateclienthelp: [
