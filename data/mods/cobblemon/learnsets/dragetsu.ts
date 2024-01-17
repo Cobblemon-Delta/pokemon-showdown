@@ -3,7 +3,6 @@ import { ModdedDex } from "../../../../sim/dex";
 
 export default function(dex: ModdedDex) {
 	const pokemon = new CreatePokemonLearnset("dragetsu", dex);
-
 	/////////////////////////////////////////
 	// Level Moves
 	////////////////////////////////////////
