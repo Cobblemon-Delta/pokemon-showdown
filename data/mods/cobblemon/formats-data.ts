@@ -11,4 +11,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	spectreon: {
 		tier: "OU",
 	},
+	dragetsu: {
+		tier: "OU",
+		natDexTier: "OU",
+	}
 };
