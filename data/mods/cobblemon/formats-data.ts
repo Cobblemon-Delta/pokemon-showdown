@@ -20,7 +20,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		natDexTier: "OU",
 	},
 	dragetsu: {
-		isNonstandard: "Past",
+		isNonstandard: "Custom",
 		tier: "OU",
 		natDexTier: "OU",
 	}
