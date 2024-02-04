@@ -9,7 +9,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] Single Battle",
 		desc: "Cobblemon Single Battles",
 		mod: 'cobblemon',
-		ruleset: ['Standard'],
+		ruleset: ['Standard', 'Cobblemon Pokedex'],
 		banlist: ['Uber', 'AG', 'Arena Trap', 'Moody', 'Sand Veil', 'Shadow Tag', 'Snow Cloak', 'King\'s Rock', 'Razor Fang', 'Baton Pass', 'Last Respects', 'Shed Tail'],
 	}
 ];
