@@ -1496,7 +1496,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		formeOrder: ["Polfeegeist", "Polfeegeist-Sheltered"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
-	polfeegeistsheltered: {
+	/*polfeegeistsheltered: {
 		num: 2046,
 		name: "Polfeegeist-Sheltered",
 		gender: "N",
@@ -1511,7 +1511,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		eggGroups: ["Mineral", "Amorphous"],
 		requiredAbility: "Sheltered Slumber",
 		battleOnly: "Polfeegeist",
-	},
+	},*/
 
 	//#endregion
 
