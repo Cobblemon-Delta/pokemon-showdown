@@ -1944,8 +1944,8 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 	//#region Wooper-Delta & Quaxolotl & Wooper-Omega & Labsire
 	wooper: { // Adjusting Wooper's Evos
 		inherit: true,
-		otherFormes: ["Wooper-Paldea", "Wooper-Delta"],
-		formeOrder: ["Wooper", "Wooper-Paldea", "Wooper-Delta"],
+		otherFormes: ["Wooper-Paldea", "Wooper-Delta", "Wooper-Omega"],
+		formeOrder: ["Wooper", "Wooper-Paldea", "Wooper-Delta", "Wooper-Omega"],
 	},
 	wooperdelta: {
 		num: 194,
