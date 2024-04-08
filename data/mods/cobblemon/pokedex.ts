@@ -913,8 +913,6 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		weightkg: 70,
 		color: "Gray",
 		prevo: "Noctowl-Delta",
-		evoType: "trade",
-		evoItem: "Clock",
 		eggGroups: ["Flying"],
 	}
 
