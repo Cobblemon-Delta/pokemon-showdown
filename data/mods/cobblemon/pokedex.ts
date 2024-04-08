@@ -883,7 +883,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		evos: ["Noctowl-Delta"],
 		eggGroups: ["Flying"],
 	},
-	noctowlhoot: {
+	noctowl: {
 		inherit: true,
 		otherFormes: ["Noctowl-Delta"],
 		formeOrder: ["Noctowl", "Noctowl-Delta"],
