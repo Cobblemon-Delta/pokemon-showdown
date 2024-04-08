@@ -902,6 +902,18 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		evos: ["Klocktowl"],
 		prevo: "Hoothoot-Delta",
 		eggGroups: ["Flying"],
+	},
+	klocktowl: {
+		num: 2038,
+		name: "Klocktowl",
+		types: ["Dark", "Flying"],
+		baseStats: {hp: 140, atk: 55, def: 80, spa: 100, spd: 92, spe: 75},
+		abilities: {0: "Insomnia", 1: "Frisk", H: "Prospect"},
+		heightm: 0.7,
+		weightkg: 70,
+		color: "Gray",
+		prevo: "Noctowl-Delta",
+		eggGroups: ["Flying"],
 	}
 
 	//#endregion
