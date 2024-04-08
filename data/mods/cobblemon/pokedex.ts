@@ -689,6 +689,110 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		evoType: "other",
 		evoCondition: "0Y-Level",
 		eggGroups: ["Field"],
+	},
+	//#endregion
+	//#region Falink-Delta
+	falinks: {
+		inherit: true,
+		otherFormes: ["Falinks-Delta"],
+		formeOrder: ["Falinks", "Falinks-Delta"],
+	},
+	falinksdelta: {
+		num: 2013,
+		name: "Falinks-Delta",
+		baseSpecies: "Falinks",
+		forme: "Delta",
+		gender: "N",
+		types: ["Fighting", "Steel"],
+		baseStats: {hp: 65, atk: 110, def: 110, spa: 45, spd: 70, spe: 70},
+		abilities: {0: "Heavy Metal", H: "Filter"},
+		heightm: 3,
+		weightkg: 62,
+		color: "Yellow",
+		eggGroups: ["Fairy", "Mineral"],
+	},
+	//#endregion
+
+	//#region Garchomp-Delta's Evolution Line
+	gible: {
+		inherit: true,
+		otherFormes: ["Gible-Delta"],
+		formeOrder: ["Gible", "Gible-Delta"],
+	},
+	gibledelta: {
+		num: 2007,
+		name: "Gible-Delta",
+		baseSpecies: "Gible",
+		forme: "Delta",
+		types: ["Dragon", "Ice"],
+		baseStats: {hp: 58, atk: 45, def: 50, spa: 60, spd: 50, spe: 37},
+		abilities: {0: "Slush Rush", H: "Own Tempo"},
+		heightm: 0.7,
+		weightkg: 20.5,
+		color: "White",
+		evos: ["Gabite-Delta"],
+		eggGroups: ["Dragon", "Monster"],
+	},
+	gabite: {
+		inherit: true,
+		otherFormes: ["Gabite-Delta"],
+		formeOrder: ["Gabite", "Gabite-Delta"],
+	},
+	gabitedelta: {
+		num: 2008,
+		name: "Gabite-Delta",
+		baseSpecies: "Gabite",
+		forme: "Delta",
+		types: ["Dragon", "Ice"],
+		baseStats: {hp: 68, atk: 55, def: 52, spa: 85, spd: 80, spe: 70},
+		abilities: {0: "Slush Rush", H: "Own Tempo"},
+		heightm: 1.4,
+		weightkg: 56,
+		prevo: "Gible-Delta",
+		evoLevel: 24,
+		evos: ["Garchomp-Delta"],
+		eggGroups: ["Dragon", "Monster"],
+	},
+	garchomp: {
+		inherit: true,
+		otherFormes: ["Garchomp-Mega", "Garchomp-Delta"],
+		formeOrder: ["Garchomp", "Garchomp-Mega", "Garchomp-Delta"],
+	},
+	garchompdelta: {
+		num: 445,
+		name: "Garchomp-Delta",
+		baseSpecies: "Garchomp",
+		baseForme: "Delta",
+		types: ["Dragon", "Ice"],
+		baseStats: {hp: 94, atk: 95, def: 95, spa: 110, spd: 100, spe: 106},
+		abilities: {0: "Slush Rush", H: "Own Tempo"},
+		heightm: 1.9,
+		weightkg: 95,
+		color: "Blue",
+		prevo: "Gabite-Delta",
+		evoLevel: 48,
+		eggGroups: ["Dragon", "Monster"],
+	},
+	//#endregion
+	
+	//#region Gorochu
+	raichu: {
+		inherit: true,
+		evos: ["Gorochu"],
+	},
+	gorochu: {
+		num: 2010,
+		name: "Gorochu",
+		types: ["Electric"],
+		baseStats: {hp: 60, atk: 120, def: 90, spa: 90, spd: 130, spe: 110},
+		abilities: {0: "Static", 1: "Transistor"},
+		heightm: 1,
+		weightkg: 45,
+		color: "Yellow",
+		prevo: "Raichu",
+		evoType: "levelHold",
+		evoItem: "Lightning Rod",
+		eggGroups: ["Fairy", "Field"],
 	}
 	//#endregion
 
