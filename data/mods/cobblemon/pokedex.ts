@@ -1489,7 +1489,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		otherFormes: ["Polfeegeist-Sheltered"],
 		formeOrder: ["Polfeegeist", "Polfeegeist-Sheltered"],
 		eggGroups: ["Mineral", "Amorphous"],
-	}
+	},
 	/*polfeegeistsheltered: {
 		num: 2046,
 		name: "Polfeegeist-Sheltered",
@@ -1507,6 +1507,308 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		battleOnly: "Polfeegeist",
 	},*/
 
+	//#endregion
+	//#region Spiritomb-Unbound
+	spiritomb: {
+		inherit: true,
+		otherFormes: ["Spiritomb-Unbound"],
+		formeOrder: ["Spiritomb", "Spiritomb-Unbound"],
+	},
+	spiritombunbound: {
+		num: 442,
+		name: "Spiritomb-Unbound",
+		baseSpecies: "Spiritomb",
+		forme: "Unbound",
+		types: ["Ghost", "Dark"],
+		baseStats: {hp: 50, atk: 132, def: 108, spa: 132, spd: 108, spe: 35},
+		abilities: {0: "Spectre Onslaught"},
+		heightm: 0.5,
+		weightkg: 108,
+		color: "Purple",
+		eggGroups: ["Amorphous"],
+	},
+	//#endregion
+
+	//#region Starly-Delta Evolution Line
+
+	starly: {
+		inherit: true,
+		otherFormes: ["Starly-Delta"],
+		formeOrder: ["Starly", "Starly-Delta"],
+	},
+	starlydelta: {
+		num: 396,
+		name: "Starly-Delta",
+		baseSpecies: "Starly",
+		forme: "Delta",
+		types: ["Normal", "Flying"],
+		baseStats: {hp: 40, atk: 55, def: 30, spa: 30, spd: 30, spe: 60},
+		abilities: {0: "Keen Eye", H: "Pressure"},
+		heightm: 0.8,
+		weightkg: 2,
+		color: "Brown",
+		evos: ["Staravia-Delta"],
+		eggGroups: ["Flying"],
+	},
+	staravia: {
+		inherit: true,
+		otherFormes: ["Staravia-Delta"],
+		formeOrder: ["Staravia", "Staravia-Delta"],
+	},
+	staraviadelta: {
+		num: 397,
+		name: "Staravia-Delta",
+		baseSpecies: "Staravia",
+		forme: "Delta",
+		types: ["Normal", "Flying"],
+		baseStats: {hp: 55, atk: 75, def: 50, spa: 40, spd: 40, spe: 80},
+		abilities: {0: "Keen Eye", H: "Pressure"},
+		heightm: 0.8,
+		weightkg: 15.5,
+		color: "Red",
+		evos: ["Staraptor-Delta"],
+		prevo: "Starly-Delta",
+		eggGroups: ["Flying"],
+	},
+	staraptor: {
+		inherit: true,
+		otherFormes: ["Staraptor-Delta"],
+		formeOrder: ["Staraptor", "Staraptor-Delta"],
+	},
+	staraptordelta: {
+		num: 397,
+		name: "Staraptor-Delta",
+		baseSpecies: "Staraptor",
+		forme: "Delta",
+		types: ["Normal", "Flying"],
+		baseStats: {hp: 85, atk: 120, def: 70, spa: 50, spd: 60, spe: 100},
+		abilities: {0: "Keen Eye", H: "Welkin Torch"},
+		heightm: 0.8,
+		weightkg: 30.5,
+		color: "Red",
+		prevo: "Staravia-Delta",
+		eggGroups: ["Flying"],
+	},
+
+	//#endregion
+
+	//#region Steelix-Delta
+	onix: {
+		inherit: true,
+		evos: ["Steelix", "Steelix-Delta"],
+	},
+	steelix: {
+		inherit: true,
+		otherFormes: ["Steelix-Mega", "Steelix-Delta"],
+		formeOrder: ["Steelix", "Steelix-Mega", "Steelix-Delta"],
+	},
+	steelixdelta: {
+		num: 208,
+		name: "Steelix-Delta",
+		baseSpecies: "Steelix",
+		forme: "Delta",
+		types: ["Ground", "Psychic"],
+		baseStats: {hp: 85, atk: 55, def: 65, spa: 75, spd: 200, spe: 30},
+		abilities: {0: "Overcoat", 1: "Telepathy", H: "Regenerator"},
+		heightm: 9.2,
+		weightkg: 400,
+		prevo: "Onix",
+		evoType: "trade",
+		evoItem: "Shulker Shell",
+		eggGroups: ["Mineral"],
+	},
+	//#endregion
+
+	//#region Tapu Kehe
+
+	tapukehe: {
+		num: 2042,
+		name: "Tapu Kehe",
+		gender: "N",
+		types: ["Electric", "Fairy"],
+		baseStats: {hp: 70, atk: 85, def: 130, spa: 95, spd: 115, spe: 75},
+		abilities: {0: "Corrossive", H: "Telepathy"},
+		heightm: 1.2,
+		weightkg: 25.6,
+		color: "Purple",
+		tags: ["Sub-Legendary"],
+		eggGroups: ["Undiscovered"],
+	},
+
+	//#endregion
+
+	//#region Tandemaus-Delta's Evolution Line
+
+	tandemaus: {
+		inherit: true,
+		otherFormes: ["Tandemaus-Delta"],
+		formeOrder: ["Tandemaus", "Tandemaus-Delta"],
+	},
+	tandemausdelta: {
+		num: 328,
+		name: "Tandemaus-Delta",
+		baseSpecies: "Tandemaus",
+		forme: "Delta",
+		types: ["Poison"],
+		baseStats: {hp: 50, atk: 50, def: 45, spa: 40, spd: 45, spe: 75},
+		abilities: {0: "Rattled"},
+		heightm: 0.5,
+		weightkg: 1.8,
+		color: "Purple",
+		evos: ["Necromauser", "Slaughtermaus"],
+		eggGroups: ["Field", "Fairy"],
+	},
+	necromauser: {
+		num: 2047,
+		name: "Necromauser-Delta",
+		types: ["Ghost", "Poison"],
+		baseStats: {hp: 150, atk: 110, def: 60, spa: 40, spd: 60, spe: 50},
+		abilities: {0: "Unrelenting Stampede"},
+		heightm: 0.5,
+		weightkg: 4.5,
+		color: "Purple",
+		prevo: "Tandemaus-Delta",
+		eggGroups: ["Field", "Fairy"],
+	},
+	slaughtermaus: {
+		num: 2048,
+		name: "Slaughtermaus-Delta",
+		types: ["Dark", "Poison"],
+		baseStats: {hp: 150, atk: 110, def: 60, spa: 40, spd: 60, spe: 50},
+		abilities: {0: "Vorpal"},
+		heightm: 0.5,
+		weightkg: 0.9,
+		color: "Red",
+		prevo: "Tandemaus-Delta",
+		eggGroups: ["Field", "Fairy"],
+	},
+
+	//#endregion
+
+	//#region Trapinch-Delta's Evolution Line
+
+	tangledtime: {
+		num: 2049,
+		name: "Tangled Time",
+		types: ["Dragon", "Psychic"],
+		gender: "N",
+		baseStats: {hp: 100, atk: 80, def: 80, spa: 125, spd: 80, spe: 125},
+		abilities: {0: "Chrono Catalyst"},
+		heightm: 1.6,
+		weightkg: 10,
+		color: "Green",
+		eggGroups: ["Undiscovered"],
+	},
+
+	//#endregion
+
+	//#region Trapinch-Delta's Evolution Line
+
+	trapinch: {
+		inherit: true,
+		otherFormes: ["Trapinch-Delta"],
+		formeOrder: ["Trapinch", "Trapinch-Delta"],
+	},
+	trapinchdelta: {
+		num: 328,
+		name: "Trapinch-Delta",
+		baseSpecies: "Trapinch",
+		forme: "Delta",
+		types: ["Bug", "Dragon"],
+		baseStats: {hp: 45, atk: 100, def: 45, spa: 45, spd: 45, spe: 10},
+		abilities: {0: "Hyper Cutter", 1: "Arena Trap", H: "Swarm"},
+		heightm: 0.5,
+		weightkg: 13.2,
+		color: "Green",
+		evos: ["Vibrava-Delta"],
+		eggGroups: ["Bug", "Dragon"],
+	},
+	vibrava: {
+		inherit: true,
+		otherFormes: ["Vibrava-Delta"],
+		formeOrder: ["Vibrava", "Vibrava-Delta"],
+	},
+	vibravadelta: {
+		num: 329,
+		name: "Vibrava-Delta",
+		baseSpecies: "Vibrava",
+		forme: "Delta",
+		types: ["Bug", "Dragon"],
+		baseStats: {hp: 50, atk: 50, def: 50, spa: 70, spd: 50, spe: 70},
+		abilities: {0: "Levitate"},
+		heightm: 0.5,
+		weightkg: 14.5,
+		color: "Green",
+		evos: ["Flygon-Delta"],
+		prevo: "Trapinch-Delta",
+		eggGroups: ["Bug", "Dragon"],
+	},
+	flygon: {
+		inherit: true,
+		otherFormes: ["Flygon-Delta"],
+		formeOrder: ["Flygon", "Flygon-Delta"],
+	},
+	flygondelta: {
+		num: 330,
+		name: "Flygon-Delta",
+		baseSpecies: "Flygon",
+		forme: "Delta",
+		types: ["Bug", "Dragon"],
+		baseStats: {hp: 80, atk: 65, def: 90, spa: 110, spd: 75, spe: 100},
+		abilities: {0: "Chromatic Scales"},
+		heightm: 0.5,
+		weightkg: 76.5,
+		color: "Green",
+		prevo: "Vibrava-Delta",
+		eggGroups: ["Bug", "Dragon"],
+	},
+
+	//#endregion
+
+	//#region Turnizone's Evolution Line
+	turnimite: {
+		num: 2027,
+		name: "Turnimite",
+		gender: "N",
+		types: ["Grass"],
+		baseStats: {hp: 35, atk: 55, def: 60, spa: 85, spd: 55, spe: 35},
+		abilities: {0: "Water Absorb", 1: "Harvest", H: "Natural Cure"},
+		heightm: 0.3,
+		weightkg: 5,
+		color: "Tan",
+		evos: ["Turniton"],
+		eggGroups: ["Grass", "Field"],
+	},
+	turniton: {
+		num: 2028,
+		name: "Turniton",
+		gender: "N",
+		types: ["Grass"],
+		baseStats: {hp: 80, atk: 75, def: 85, spa: 95, spd: 65, spe: 65},
+		abilities: {0: "Water Absorb", 1: "Harvest", H: "Natural Cure"},
+		heightm: 1,
+		weightkg: 60,
+		color: "Pink",
+		prevo: "Turnimite",
+		evoLevel: 30,
+		evos: ["Turnizone"],
+		eggGroups: ["Grass", "Field"],
+	},
+	turnizone: {
+		num: 2029,
+		name: "Turnizone",
+		gender: "N",
+		types: ["Grass", "Ground"],
+		baseStats: {hp: 95, atk: 70, def: 100, spa: 105, spd: 115, spe: 50},
+		abilities: {0: "Water Absorb", 1: "Harvest", H: "Taproot"},
+		heightm: 1.2,
+		weightkg: 180,
+		color: "Purple",
+		prevo: "Turniton",
+		evoType: "useItem",
+		evoItem: "Leaf Stone",
+		eggGroups: ["Grass", "Field"],
+	}
 	//#endregion
 
 
