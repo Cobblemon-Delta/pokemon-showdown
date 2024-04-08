@@ -914,8 +914,112 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		color: "Gray",
 		prevo: "Noctowl-Delta",
 		eggGroups: ["Flying"],
-	}
+	},
 
 	//#endregion
+	//#region Klinklang-Delta's Evolution Line
+
+	klink: {
+		inherit: true,
+		otherFormes: ["Klink-Delta"],
+		formeOrder: ["Klink", "Klink-Delta"],
+	},
+	klinkdelta: {
+		num: 599,
+		name: "Klink-Delta",
+		baseSpecies: "Klink",
+		forme: "Delta",
+		types: ["Steel", "Ice"],
+		baseStats: {hp: 40, atk: 40, def: 55, spa: 55, spd: 50, spe: 60},
+		abilities: {0: "Ice Body", 1: "Clear Body", H: "Minus"},
+		heightm: 0.7,
+		weightkg: 12.1,
+		color: "White",
+		evos: ["Klang-Delta"],
+		eggGroups: ["Mineral"],
+	},
+	klang: {
+		inherit: true,
+		otherFormes: ["Klang-Delta"],
+		formeOrder: ["Klang", "Klang-Delta"],
+	},
+	klangdelta: {
+		num: 600,
+		name: "Klang-Delta",
+		baseSpecies: "Klang",
+		forme: "Delta",
+		types: ["Steel", "Ice"],
+		baseStats: {hp: 70, atk: 55, def: 75, spa: 85, spd: 79, spe: 76},
+		abilities: {0: "Ice Body", 1: "Clear Body", H: "Plus"},
+		heightm: 0.7,
+		weightkg: 12.1,
+		color: "White",
+		prevo: "Klink-Delta",
+		evos: ["Klinklang-Delta"],
+		eggGroups: ["Mineral"],
+	},
+	klinklang: {
+		inherit: true,
+		otherFormes: ["Klinklang-Delta"],
+		formeOrder: ["Klinklang", "Klinklang-Delta"],
+	},
+	klinklangdelta: {
+		num: 601,
+		name: "Klinklang-Delta",
+		baseSpecies: "Klinklang",
+		forme: "Delta",
+		types: ["Steel", "Ice"],
+		baseStats: {hp: 80, atk: 60, def: 98, spa: 104, spd: 90, spe: 88},
+		abilities: {0: "Ice Body", 1: "Clear Body", H: "Chronostasis"},
+		heightm: 0.7,
+		weightkg: 12.1,
+		color: "White",
+		prevo: "Klang-Delta",
+		eggGroups: ["Mineral"],
+	},
+
+	//#endregion
+
+	//#region Larvesta-Delta's Evolution Line
+
+	larvesta: {
+		inherit: true,
+		otherFormes: ["Larvesta-Delta"],
+		formeOrder: ["Larvesta", "Larvesta-Delta"],
+	},
+	larvestadelta: {
+		num: 636,
+		name: "Larvesta-Delta",
+		baseSpecies: "Larvesta",
+		forme: "Delta",
+		types: ["Bug", "Psychic"],
+		baseStats: {hp: 55, atk: 85, def: 55, spa: 50, spd: 55, spe: 60},
+		abilities: {0: "Anticipation", H: "Swarm"},
+		heightm: 0.7,
+		weightkg: 12.1,
+		color: "Yellow",
+		evos: ["Volcarona-Delta"],
+		eggGroups: ["Bug"],
+	},
+	volcarona: {
+		inherit: true,
+		otherFormes: ["Volcarona-Delta"],
+		formeOrder: ["Volcarona", "Volcarona-Delta"],
+	},
+	volcaronadelta: {
+		num: 637,
+		name: "Volcarona-Delta",
+		baseSpecies: "Volcarona",
+		forme: "Delta",
+		types: ["Bug", "Psychic"],
+		baseStats: {hp: 85, atk: 60, def: 65, spa: 135, spd: 105, spe: 100},
+		abilities: {0: "Crescent Form", H: "Swarm"},
+		heightm: 0.7,
+		weightkg: 12.1,
+		color: "Pink",
+		prevo: "Larvesta-Delta",
+		eggGroups: ["Bug"],
+	}
+
 
 };
