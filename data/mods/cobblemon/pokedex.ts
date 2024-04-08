@@ -882,6 +882,26 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		color: "Gray",
 		evos: ["Noctowl-Delta"],
 		eggGroups: ["Flying"],
+	},
+	noctowlhoot: {
+		inherit: true,
+		otherFormes: ["Noctowl-Delta"],
+		formeOrder: ["Noctowl", "Noctowl-Delta"],
+	},
+	noctowldelta: {
+		num: 164,
+		name: "Noctowl-Delta",
+		baseSpecies: "Noctowl",
+		forme: "Delta",
+		types: ["Dark", "Flying"],
+		baseStats: {hp: 90, atk: 62, def: 60, spa: 90, spd: 70, spe: 80},
+		abilities: {0: "Insomnia", 1: "Frisk", H: "Forewarn"},
+		heightm: 0.7,
+		weightkg: 38,
+		color: "Gray",
+		evos: ["Klocktowl"],
+		prevo: "Hoothoot-Delta",
+		eggGroups: ["Flying"],
 	}
 
 	//#endregion
