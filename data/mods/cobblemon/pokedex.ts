@@ -367,6 +367,109 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		weightkg: 28.3,
 		color: 'Gray',
 		eggGroups: ["Amorphous"],
-	}
+	},
+
+	//#endregion
+
+	//#region Clamperl-Delta's Evolution Line
+
+	clamperl: {
+		inherit: true,
+		otherFormes: ["Clamperl-Delta"],
+		formeOrder: ["Clamperl", "Clamperl-Delta"],
+	},
+	clamperldelta: {
+		num: 366,
+		name: "Clamperl-Delta",
+		baseSpecies: "Clamperl",
+		forme: "Delta",
+		types: ["Dragon"],
+		baseStats: {hp: 35, atk: 75, def: 80, spa: 62, spd: 53, spe: 40},
+		abilities: {0: "Shell Armor", H: "Simple"},
+		heightm: 1.3,
+		weightkg: 35,
+		color: 'Yellow',
+		evos: ["Gorebyss-Delta", "Huntail-Delta"],
+		eggGroups: ["Water 1"],
+	},
+	huntail: {
+		inherit: true,
+		otherFormes: ["Huntail-Delta"],
+		formeOrder: ["Huntail", "Huntail-Delta"],
+	},
+	huntaildelta: {
+		num: 367,
+		name: "Huntail-Delta",
+		baseSpecies: "Huntail",
+		forme: "Delta",
+		types: ["Dragon", "Dark"],
+		baseStats: {hp: 55, atk: 107, def: 95, spa: 98, spd: 70, spe: 60},
+		abilities: {0: "Hydration", H: "Breach"},
+		heightm: 1.3,
+		weightkg: 30.5,
+		color: 'Blue',
+		prevo: "Clamperl-Delta",
+		eggGroups: ["Water 1"],
+	},
+	gorebyss: {
+		inherit: true,
+		otherFormes: ["Gorebyss-Delta"],
+		formeOrder: ["Gorebyss", "Gorebyss-Delta"],
+	},
+	gorebyssdelta: {
+		num: 368,
+		name: "Gorebyss-Delta",
+		baseSpecies: "Gorebyss",
+		forme: "Delta",
+		types: ["Dragon", "Fairy"],
+		baseStats: {hp: 55, atk: 93, def: 95, spa: 112, spd: 70, spe: 60},
+		abilities: {0: "Hydration", H: "Exalt"},
+		heightm: 1.3,
+		weightkg: 26.6,
+		color: 'Red',
+		prevo: "Clamperl-Delta",
+		eggGroups: ["Water 1"],
+	},
+
+	//#endregion
+
+	//#region Cloyster-Delta's Evolution Line
+
+	shellder: {
+		inherit: true,
+		otherFormes: ["Shellder-Delta"],
+		formeOrder: ["Shellder", "Shellder-Delta"],
+	},
+	shellderdelta: {
+		num: 90,
+		name: "Shellder-Delta",
+		baseSpecies: "Shellder",
+		forme: "Delta",
+		types: ["Ice", "Poison"],
+		baseStats: {hp: 30, atk: 70, def: 100, spa: 35, spd: 30, spe: 40},
+		abilities: {0: "Shell Armor", 1: "Poison Point", H: "Weak Armor"},
+		heightm: 0.6,
+		weightkg: 3,
+		evos: ["Cloyster-Delta"],
+		eggGroups: ["Water 3"],
+	},
+	cloysterdelta: {
+		num: 91,
+		name: "Cloyster-Delta",
+		baseSpecies: "Cloyster",
+		forme: "Delta",
+		types: ["Ice", "Poison"],
+		baseStats: {hp: 50, atk: 115, def: 165, spa: 65, spd: 55, spe: 75},
+		abilities: {0: "Shell Armor", 1: "Poison Point", H: "Intimidate"},
+		heightm: 0.6,
+		weightkg: 122,
+		prevo: "Shellder-Delta",
+		eggGroups: ["Water 3"],
+	},
+
+	//#endregion
+
+	//#region Curesola's Evolution Line
+	
 
 };
