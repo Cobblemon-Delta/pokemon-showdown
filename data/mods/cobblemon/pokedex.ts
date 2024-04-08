@@ -526,6 +526,25 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 	},
 	//#endregion
 
+	//#region Drifblimp
+	drifblim: {
+		inherit: true,
+		evos: ["Drifblimp"],
+	},
+	drifblimp: {
+		num: 2051,
+		name: "Drifblimp",
+		types: ["Ghost", "Flying"],
+		baseStats: {hp: 200, atk: 58, def: 62, spa: 100, spd: 70, spe: 60},
+		abilities: {0: "Stamina", 1: "Unburden", H: "Flare Boost"},
+		heightm: 14.2,
+		weightkg: 120,
+		prevo: "Drifblim",
+		eggGroups: ["Amorphous"],
+	},
+
+	//#endregion
+
 	//#region Ectarachnid
 	ariados: {
 		inherit: true,
@@ -698,7 +717,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		formeOrder: ["Falinks", "Falinks-Delta"],
 	},
 	falinksdelta: {
-		num: 2013,
+		num: 870,
 		name: "Falinks-Delta",
 		baseSpecies: "Falinks",
 		forme: "Delta",
@@ -1158,6 +1177,40 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 	},
 	//#endregion
 
+	//#region Malevorus-Incarnate and Malevorus-Therian
+
+	malevorus: {
+		num: 2052,
+		name: "Malevorus",
+		baseForme: "Incarnate",
+		types: ["Dark", "Flying"],
+		gender: "M",
+		baseStats: {hp: 89, atk: 115, def: 90, spa: 115, spd: 80, spe: 111},
+		abilities: {0: "Tough Claws", H: "Vital Spirit"},
+		heightm: 1.5,
+		weightkg: 70,
+		color: "Yellow",
+		tags: ["Sub-Legendary"],
+		eggGroups: ["Undiscovered"],
+		otherFormes: ["Malevorus-Therian"],
+		formeOrder: ["Malevorus", "Malevorus-Therian"],
+	},
+	malevorustherian: {
+		num: 2052,
+		name: "Malevorus-Therian",
+		baseSpecies: "Malevorus",
+		forme: "Therian",
+		types: ["Dark", "Flying"],
+		gender: "M",
+		baseStats: {hp: 89, atk: 105, def: 80, spa: 130, spd: 80, spe: 116},
+		abilities: {0: "Cloud Nine"},
+		heightm: 6.1,
+		weightkg: 70,
+		color: "Yellow",
+		eggGroups: ["Undiscovered"],
+		changesFrom: "Malevorus",
+	},
+
 	//#region Meowth-Delta's Evolution line
 
 	meowth: {
@@ -1322,6 +1375,49 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		color: "Brown",
 		prevo: "Sandygast-Delta",
 		eggGroups: ["Amorphous"],
+	},
+
+	//#endregion
+
+	//#region Shellos-Delta's Evolution Line
+
+	shellos: {
+		inherit: true,
+		otherFormes: ["Shellos-Delta"],
+		formeOrder: ["Shellos", "Shellos-Delta"],
+	},
+	shellosdelta: {
+		num: 422,
+		name: "Shellos-Delta",
+		baseSpecies: "Shellos",
+		forme: "Delta",
+		types: ["Water"],
+		baseStats: {hp: 76, atk: 43, def: 48, spa: 57, spd: 62, spe: 34},
+		abilities: {0: "Sticky Hold", 1: "Gooey", H: "Immunity"},
+		heightm: 0.3,
+		weightkg: 5,
+		color: "Blue",
+		evos: ["Gastrodon-Delta"],
+		eggGroups: ["Water 1", "Amorphous"],
+	},
+	gastrodon: {
+		inherit: true,
+		otherFormes: ["Gastrodon-Delta"],
+		formeOrder: ["Gastrodon", "Gastrodon-Delta"],
+	},
+	gastrodondelta: {
+		num: 374,
+		name: "Gastrodon-Delta",
+		baseSpecies: "Gastrodon",
+		forme: "Delta",
+		types: ["Water", "Dragon"],
+		baseStats: {hp: 111, atk: 73, def: 78, spa: 82, spd: 92, spe: 39},
+		abilities: {0: "Sticky Hold", 1: "Gooey", H: "Poison Heal"},
+		heightm: 0.9,
+		weightkg: 26,
+		color: "Blue",
+		prevo: "Shellos-Delta",
+		eggGroups: ["Water 1", "Amorphous"],
 	},
 
 	//#endregion
@@ -1576,7 +1672,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		formeOrder: ["Staraptor", "Staraptor-Delta"],
 	},
 	staraptordelta: {
-		num: 397,
+		num: 398,
 		name: "Staraptor-Delta",
 		baseSpecies: "Staraptor",
 		forme: "Delta",
@@ -1810,11 +1906,12 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		eggGroups: ["Grass", "Field"],
 	},
 	//#endregion
-	//#region Tinkaton-Delta
+
+	//#region Tinkaton-Delta / Tinkaton-Omega
 	tinkatink: {
 		inherit: true,
-		otherFormes: ["Tinkatink-Delta"],
-		formeOrder: ["Tinkatink", "Tinkatink-Delta"],
+		otherFormes: ["Tinkatink-Delta", "Tinkatink-Omega"],
+		formeOrder: ["Tinkatink", "Tinkatink-Delta", "Tinkatink-Omega"],
 	},
 	tinkatinkdelta: {
 		num: 957,
@@ -1824,15 +1921,30 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		types: ["Fairy", "Water"],
 		baseStats: {hp: 50, atk: 55, def: 54, spa: 40, spd: 40, spe: 58},
 		abilities: {0: "Suction Cups", 1: "Pickpocket", H: "Rain Dish"},
-		heightm: 0.7,
+		heightm: 0.4,
 		weightkg: 218.5,
 		color: "Blue",
+		evos: ["Tinkatuff-Delta"],
+		eggGroups: ["Fairy"],
+	},
+	tinkatinkomega: {
+		num: 957,
+		name: "Tinkatink-Omega",
+		baseSpecies: "Tinkatink",
+		forme: "Omega",
+		types: ["Fairy", "Bug"],
+		baseStats: {hp: 60, atk: 55, def: 50, spa: 30, spd: 48, spe: 54},
+		abilities: {0: "Hyper Cutter", 1: "Own Tempo", H: "Sharpness"},
+		heightm: 0.4,
+		weightkg: 8.4,
+		color: "Green",
+		evos: ["Tinkatuff-Omega"],
 		eggGroups: ["Fairy"],
 	},
 	tinkatuff: {
 		inherit: true,
-		otherFormes: ["Tinkatuff-Delta"],
-		formeOrder: ["Tinkatuff", "Tinkatuff-Delta"],
+		otherFormes: ["Tinkatuff-Delta", "Tinkatuff-Omega"],
+		formeOrder: ["Tinkatuff", "Tinkatuff-Delta", "Tinkatuff-Omega"],
 	},
 	tinkatuffdelta: {
 		num: 958,
@@ -1845,12 +1957,29 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		heightm: 0.7,
 		weightkg: 218.5,
 		color: "Blue",
+		evos: ["Tinkaton-Delta"],
+		prevo: "Tinkatink-Delta",
+		eggGroups: ["Fairy"],
+	},
+	tinkatuffomega: {
+		num: 958,
+		name: "Tinkatuff-Omega",
+		baseSpecies: "Tinkatuff",
+		forme: "Omega",
+		types: ["Fairy", "Bug"],
+		baseStats: {hp: 85, atk: 75, def: 68, spa: 32, spd: 50, spe: 70},
+		abilities: {0: "Hyper Cutter", 1: "Own Tempo", H: "Sharpness"},
+		heightm: 0.7,
+		weightkg: 22.4,
+		color: "Green",
+		evos: ["Tinkaton-Omega"],
+		prevo: "Tinkatink-Omega",
 		eggGroups: ["Fairy"],
 	},
 	tinkaton: {
 		inherit: true,
-		otherFormes: ["Tinkaton-Delta"],
-		formeOrder: ["TInkaton", "Tinkaton-Delta"],
+		otherFormes: ["Tinkaton-Delta", "Tinkaton-Omega"],
+		formeOrder: ["TInkaton", "Tinkaton-Delta", "Tinkaton-Omega"],
 	},
 	tinkatondelta: {
 		num: 959,
@@ -1863,6 +1992,21 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		heightm: 0.7,
 		weightkg: 218.5,
 		color: "Blue",
+		prevo: "Tinkatuff-Omega",
+		eggGroups: ["Fairy"],
+	},
+	tinkatonomega: {
+		num: 958,
+		name: "Tinkaton-Omega",
+		baseSpecies: "Tinkaton",
+		forme: "Omega",
+		types: ["Fairy", "Bug"],
+		baseStats: {hp: 105, atk: 120, def: 86, spa: 50, spd: 60, spe: 85},
+		abilities: {0: "Hyper Cutter", 1: "Own Tempo", H: "Sharpness"},
+		heightm: 0.7,
+		weightkg: 34.5,
+		color: "Green",
+		prevo: "Tinkatuff-Omega",
 		eggGroups: ["Fairy"],
 	},
 	//#endregion
@@ -2021,7 +2165,31 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		evoType: "levelMove",
 		evoMove: "Ancient Power",
 		eggGroups: ["Grass", "Flying"],
+	},
+	//#endregion
+
+	//#region Mega Zoroark-Hisui
+
+	zoroark: {
+		inherit: true,
+		otherFormes: ["Zoroark-Hisui", "Zoroark-Hisui-Mega"],
+		formeOrder: ["Zoroark", "Zoroark-Hisui", "Zoroark-Hisui-Mega"],
+	},
+	zoroarkhisuimega: {
+		num: 571,
+		name: "Zoroark-Hisui-Mega",
+		baseSpecies: "Zoroark-Hisui",
+		forme: "Mega",
+		types: ["Normal", "Ghost"],
+		baseStats: {hp: 55, atk: 130, def: 70, spa: 155, spd: 70, spe: 130},
+		abilities: {0: "Shapeshift"},
+		heightm: 2.1,
+		weightkg: 90.5,
+		color: "Gray",
+		eggGroups: ["Field"],
+		requiredItem: "HisuianZoroarkanite",
 	}
+
 	//#endregion
 
 
