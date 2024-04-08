@@ -793,6 +793,73 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		evoType: "levelHold",
 		evoItem: "Lightning Rod",
 		eggGroups: ["Fairy", "Field"],
+	},
+	//#endregion
+	//#region Arcanine-Delta's Evolution Line
+	growlithe: {
+		inherit: true,
+		otherFormes: ["Growlithe-Hisui","Growlithe-Delta"],
+		formeOrder: ["Growlithe", "Growlithe-Hisui", "Growlithe-Delta"],
+	},
+	growlithedelta: {
+		num: 2020,
+		name: "Growlithe-Delta",
+		baseSpecies: "Growlithe",
+		forme: "Delta",
+		types: ["Water"],
+		baseStats: {hp: 55, atk: 70, def: 45, spa: 65, spd: 50, spe: 65},
+		abilities: {0: "Intimidate", 1: "Water Absorb", H: "Justified"},
+		heightm: 0.7,
+		weightkg: 19,
+		color: "Blue",
+		evos: ["Arcanine-Delta"],
+		eggGroups: ["Field"],
+	},
+	arcanine: {
+		inherit: true,
+		otherFormes: ["Arcanine-Hisui", "Arcanine-Delta"],
+		formeOrder: ["Arcanine", "Arcanine-Hisui", "Arcanine-Delta"],
+	},
+	arcaninedelta: {
+		num: 2021,
+		name: "Arcanine-Delta",
+		baseSpecies: "Arcanine",
+		forme: "Delta",
+		types: ["Water"],
+		baseStats: {hp: 85, atk: 115, def: 80, spa: 95, spd: 89, spe: 100},
+		abilities: {0: "Intimidate", 1: "Water Absorb", H: "Justified"},
+		heightm: 1.9,
+		weightkg: 155,
+		color: "Blue",
+		prevo: "Growlithe",
+		evoType: "useItem",
+		evoItem: "Water Stone",
+		eggGroups: ["Field"],
+	},
+	//#endregion
+
+	//#region Greninja-Delta
+	frogadier: {
+		inherit: true,
+		evos: ["Greninja", "Greninja-Delta"],
+	},
+	greninja: {
+		inherit: true,
+		otherFormes: ["Greninja-Bond", "Greninja-Ash", "Greninja-Delta"],
+		formeOrder: ["Greninja", "Greninja-Bond", "Greninja-Ash", "Greninja-Delta"],
+	},
+	greninjadelta: {
+		num: 658,
+		name: "Greninja-Delta",
+		baseSpecies: "Greninja",
+		forme: "Delta",
+		types: ["Water", "Rock"],
+		baseStats: {hp: 72, atk: 115, def: 85, spa: 83, spd: 66, spe: 109},
+		abilities: {0: "Torrent", H: "Precedence"},
+		heightm: 1.5,
+		weightkg: 40,
+		color: "Orange",
+		eggGroups: ["Water 1"],
 	}
 	//#endregion
 
