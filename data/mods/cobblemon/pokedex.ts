@@ -281,6 +281,69 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 
 	//#endregion
 
+	//#region Budew-Delta's Evolution Line
+
+	budew: {
+		inherit: true,
+		otherFormes: ["Budew-Delta"],
+		formeOrder: ["Budew", "Budew-Delta"],
+	},
+	budewdelta: {
+		num: 406,
+		name: "Budew-Delta",
+		baseSpecies: "Budew",
+		forme: "Delta",
+		types: ["Grass", "Steel"],
+		baseStats: {hp: 40, atk: 50, def: 70, spa: 30, spd: 35, spe: 55},
+		abilities: {0: "Natural Cure", 1: "Chlorophyll", H: "Iron Barbs"},
+		heightm: 0.2,
+		weightkg: 4.5,
+		color: "Green",
+		evos: ["Roselia-Delta"],
+		eggGroups: ["Undiscovered"],
+	},
+	roselia: {
+		inherit: true,
+		otherFormes: ["Roselia-Delta"],
+		formeOrder: ["Roselia", "Roselia-Delta"],
+	},
+	roseliadelta: {
+		num: 407,
+		name: "Roselia-Delta",
+		baseSpecies: "Roselia",
+		forme: "Delta",
+		types: ["Grass", "Steel"],
+		baseStats: {hp: 50, atk: 80, def: 95, spa: 40, spd: 65, spe: 70},
+		abilities: {0: "Natural Cure", 1: "Chlorophyll", H: "Iron Barbs"},
+		heightm: 0.3,
+		weightkg: 7.5,
+		color: "Green",
+		evos: ["Roserade-Delta"],
+		prevo: "Budew-Delta",
+		eggGroups: ["Fairy", "Grass"],
+	},
+	roserade: {
+		inherit: true,
+		otherFormes: ["Roserade-Delta"],
+		formeOrder: ["Roserade", "Roserade-Delta"],
+	},
+	roseradedelta: {
+		num: 408,
+		name: "Roserade-Delta",
+		baseSpecies: "Roserade",
+		forme: "Delta",
+		types: ["Grass", "Steel"],
+		baseStats: {hp: 60, atk: 95, def: 120, spa: 60, spd: 80, spe: 100},
+		abilities: {0: "Sharpness", 1: "Chlorophyll", H: "Swordmaster"},
+		heightm: 1.1,
+		weightkg: 18.5,
+		color: "Green",
+		prevo: "Roselia-Delta",
+		eggGroups: ["Fairy", "Grass"],
+	},
+
+	//#endregion
+
 	//#region Charizard-Delta's Evolution Line
 
 	charmander: {
@@ -333,13 +396,90 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		baseSpecies: "Charizard",
 		forme: "Delta",
 		types: ["Fire", "Dark"],
-		baseStats: {hp: 78, atk: 116, def: 88, spa: 82, spd: 70, spe: 100},
+		baseStats: {hp: 78, atk: 126, def: 88, spa: 72, spd: 70, spe: 100},
 		abilities: {0: "Blaze", H: "Defiant"},
 		heightm: 0.8,
 		weightkg: 110,
 		color: "Black",
 		prevo: "Charmeleon-Delta",
 		eggGroups: ["Monster", "Dragon"],
+	},
+
+	//#endregion
+
+	//#region Chimchar-Delta's Evolution Line
+
+	chimchar: {
+		inherit: true,
+		otherFormes: ["Chimchar-Delta"],
+		formeOrder: ["Chimchar", "Chimchar-Delta"],
+	},
+	chimchardelta: {
+		num: 390,
+		name: "Chimchar-Delta",
+		baseSpecies: "Chimchar",
+		forme: "Delta",
+		types: ["Electric"],
+		baseStats: {hp: 44, atk: 58, def: 44, spa: 58, spd: 44, spe: 61},
+		abilities: {0: "Surge", H: "Vital Spirit"},
+		heightm: 0.8,
+		weightkg: 6.5,
+		color: "Yellow",
+		evos: ["Monferno-Delta"],
+		eggGroups: ["Field", "Human-Like"],
+	},
+	monferno: {
+		inherit: true,
+		otherFormes: ["Monferno-Delta"],
+		formeOrder: ["Monferno", "Monferno-Delta"],
+	},
+	monfernodelta: {
+		num: 391,
+		name: "Monferno-Delta",
+		baseSpecies: "Monferno",
+		forme: "Delta",
+		types: ["Electric", "Fighting"],
+		baseStats: {hp: 64, atk: 76, def: 52, spa: 76, spd: 52, spe: 85},
+		abilities: {0: "Surge", H: "Vital Spirit"},
+		heightm: 0.8,
+		weightkg: 26,
+		color: "Yellow",
+		evos: ["Infernape-Delta"],
+		prevo: "Chimchar-Delta",
+		eggGroups: ["Field", "Human-Like"],
+	},
+	infernape: {
+		inherit: true,
+		otherFormes: ["Infernape-Delta", "Infernape-Delta-Mega"],
+		formeOrder: ["Infernape", "Infernape-Delta", "Infernape-Delta-Mega"],
+	},
+	infernapedelta: {
+		num: 392,
+		name: "Infernape-Delta",
+		baseSpecies: "Infernape",
+		forme: "Delta",
+		types: ["Electric", "Fighting"],
+		baseStats: {hp: 73, atk: 102, def: 75, spa: 97, spd: 75, spe: 112},
+		abilities: {0: "Surge", H: "Long Reach"},
+		heightm: 0.8,
+		weightkg: 65,
+		color: "Yellow",
+		prevo: "Monferno-Delta",
+		eggGroups: ["Field", "Human-Like"],
+	},
+	infernapedeltamega: {
+		num: 392,
+		name: "Infernape-Delta-Mega",
+		baseSpecies: "Infernape-Delta",
+		forme: "Mega",
+		types: ["Electric", "Fighting"],
+		baseStats: {hp: 55, atk: 127, def: 92, spa: 127, spd: 92, spe: 123},
+		abilities: {0: "Monarch's Pole"},
+		heightm: 2.1,
+		weightkg: 65,
+		color: "Yellow",
+		eggGroups: ["Field", "Human-Like"],
+		requiredItem: "DeltaInfernapite",
 	},
 
 	//#endregion
@@ -514,7 +654,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		num: 20012,
 		name: "Dragetsu",
 		types: ["Dragon"],
-		baseStats: {hp: 93, atk: 80, def: 88, spa: 120, spd: 127, spe: 92},
+		baseStats: {hp: 93, atk: 70, def: 88, spa: 123, spd: 127, spe: 99},
 		abilities: {0: "Shed Skin", H: "Pure Guise"},
 		heightm: 5,
 		weightkg: 20,
@@ -881,6 +1021,41 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		eggGroups: ["Water 1"],
 	},
 	//#endregion
+
+	//#region Iron Revival
+
+	ironrevival: {
+		num: 2053,
+		name: "Iron Revival",
+		types: ["Flying", "Electric"],
+		gender: "N",
+		baseStats: {hp: 105, atk: 85, def: 105, spa: 135, spd: 130, spe: 110},
+		abilities: {0: "Quark Drive"},
+		heightm: 4.3,
+		weightkg: 230,
+		color: "Red",
+		eggGroups: ["Undiscovered"],
+	},
+
+	//#endregion
+
+	//#region Iron Storm
+
+	ironstorm: {
+		num: 2054,
+		name: "Iron Storm",
+		types: ["Flying", "Steel"],
+		gender: "N",
+		baseStats: {hp: 105, atk: 110, def: 115, spa: 110, spd: 140, spe: 90},
+		abilities: {0: "Quark Drive"},
+		heightm: 5.8,
+		weightkg: 240,
+		color: "White",
+		eggGroups: ["Undiscovered"],
+	},
+
+	//#endregion
+
 	//#region Klocktowl-Delta's Evolution Line
 
 	hoothoot: {
@@ -926,7 +1101,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		num: 2038,
 		name: "Klocktowl",
 		types: ["Dark", "Flying"],
-		baseStats: {hp: 140, atk: 55, def: 80, spa: 100, spd: 92, spe: 75},
+		baseStats: {hp: 140, atk: 50, def: 70, spa: 110, spd: 102, spe: 65},
 		abilities: {0: "Insomnia", 1: "Frisk", H: "Prospect"},
 		heightm: 0.7,
 		weightkg: 70,
@@ -1315,6 +1490,23 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 	},
 	//#endregion
 
+	//#region Rising Pheonix
+
+	risingpheonix: {
+		num: 2056,
+		name: "Rising Pheonix",
+		types: ["Fire", "Fighting"],
+		gender: "N",
+		baseStats: {hp: 105, atk: 135, def: 130, spa: 85, spd: 105, spe: 110},
+		abilities: {0: "Protosynthesis"},
+		heightm: 3.5,
+		weightkg: 165,
+		color: "Red",
+		eggGroups: ["Undiscovered"],
+	},
+
+	//#endregion
+
 	//#region Sableye-Delta
 	sableye: {
 		inherit: true,
@@ -1474,7 +1666,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		baseSpecies: "Luxray",
 		forme: "Delta",
 		types: ["Electric", "Fighting"],
-		baseStats: {hp: 70, atk: 127, def: 99, spa: 75, spd: 72, spe: 80},
+		baseStats: {hp: 70, atk: 132, def: 99, spa: 65, spd: 62, spe: 95},
 		abilities: {0: "Opportunist", 1: "Rivalry", H: "Costar"},
 		heightm: 0.8,
 		weightkg: 56.5,
@@ -1677,7 +1869,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		baseSpecies: "Staraptor",
 		forme: "Delta",
 		types: ["Normal", "Flying"],
-		baseStats: {hp: 85, atk: 120, def: 70, spa: 50, spd: 60, spe: 100},
+		baseStats: {hp: 85, atk: 90, def: 80, spa: 70, spd: 60, spe: 100},
 		abilities: {0: "Keen Eye", H: "Welkin Torch"},
 		heightm: 0.8,
 		weightkg: 30.5,
@@ -1770,7 +1962,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		num: 2048,
 		name: "Slaughtermaus-Delta",
 		types: ["Dark", "Poison"],
-		baseStats: {hp: 150, atk: 110, def: 60, spa: 40, spd: 60, spe: 50},
+		baseStats: {hp: 65, atk: 110, def: 65, spa: 50, spd: 65, spe: 115},
 		abilities: {0: "Vorpal"},
 		heightm: 0.5,
 		weightkg: 0.9,
@@ -1841,8 +2033,8 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 	},
 	flygon: {
 		inherit: true,
-		otherFormes: ["Flygon-Delta"],
-		formeOrder: ["Flygon", "Flygon-Delta"],
+		otherFormes: ["Flygon-Delta", "Flygon-Mega"],
+		formeOrder: ["Flygon", "Flygon-Mega", "Flygon-Delta"],
 	},
 	flygondelta: {
 		num: 330,
@@ -1857,6 +2049,20 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		color: "Green",
 		prevo: "Vibrava-Delta",
 		eggGroups: ["Bug", "Dragon"],
+	},
+	flygonmega: {
+		num: 330,
+		name: "Flygon-Mega",
+		baseSpecies: "Flygon",
+		forme: "Mega",
+		types: ["Ground", "Dragon"],
+		baseStats: {hp: 80, atk: 115, def: 80, spa: 115, spd: 80, spe: 150},
+		abilities: {0: "Desert Spirit"},
+		heightm: 2.1,
+		weightkg: 50,
+		color: "Green",
+		eggGroups: ["Bug", "Dragon"],
+		requiredItem: "Flygonite",
 	},
 
 	//#endregion
@@ -1987,8 +2193,8 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		baseSpecies: "Tinkaton",
 		forme: "Delta",
 		types: ["Fairy", "Water"],
-		baseStats: {hp: 85, atk: 85, def: 95, spa: 80, spd: 67, spe: 94},
-		abilities: {0: "Suction Cups", 1: "Steelworker", H: "Rain Dish"},
+		baseStats: {hp: 85, atk: 90, def: 95, spa: 65, spd: 77, spe: 94},
+		abilities: {0: "Suction Cups", 1: "Steelworker", H: "Immunity"},
 		heightm: 0.7,
 		weightkg: 218.5,
 		color: "Blue",
@@ -2066,7 +2272,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		forme: "Delta",
 		types: ["Electric"],
 		genderRatio: {M: 0.875, F: 0.125},
-		baseStats: {hp: 73, atk: 94, def: 73, spa: 114, spd: 80, spe: 100},
+		baseStats: {hp: 73, atk: 84, def: 73, spa: 124, spd: 80, spe: 100},
 		abilities: {0: "Surge", H: "Drizzle"},
 		heightm: 1.7,
 		weightkg: 79.5,
@@ -2075,6 +2281,23 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		evoLevel: 36,
 		eggGroups: ["Field"],
 	},
+	//#endregion
+
+	//#region Whirling Abyss
+
+	whirlingabyss: {
+		num: 2055,
+		name: "Whirling Abyss",
+		types: ["Psychic", "Water"],
+		gender: "N",
+		baseStats: {hp: 105, atk: 110, def: 140, spa: 110, spd: 115, spe: 90},
+		abilities: {0: "Protosynthesis"},
+		heightm: 4.9,
+		weightkg: 256,
+		color: "White",
+		eggGroups: ["Undiscovered"],
+	},
+
 	//#endregion
 
 	//#region Wooper-Delta & Quaxolotl & Wooper-Omega & Labsire
