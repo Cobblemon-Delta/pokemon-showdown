@@ -1352,6 +1352,42 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 	},
 	//#endregion
 
+	//#region Malevorus-Incarnate and Malevorus-Therian
+
+	malevorus: {
+		num: 2052,
+		name: "Malevorus",
+		baseForme: "Incarnate",
+		types: ["Dark", "Flying"],
+		gender: "M",
+		baseStats: {hp: 89, atk: 115, def: 90, spa: 115, spd: 80, spe: 111},
+		abilities: {0: "Tough Claws", H: "Vital Spirit"},
+		heightm: 1.5,
+		weightkg: 70,
+		color: "Yellow",
+		tags: ["Sub-Legendary"],
+		eggGroups: ["Undiscovered"],
+		otherFormes: ["Malevorus-Therian"],
+		formeOrder: ["Malevorus", "Malevorus-Therian"],
+	},
+	malevorustherian: {
+		num: 2052,
+		name: "Malevorus-Therian",
+		baseSpecies: "Malevorus",
+		forme: "Therian",
+		types: ["Dark", "Flying"],
+		gender: "M",
+		baseStats: {hp: 89, atk: 105, def: 80, spa: 130, spd: 80, spe: 116},
+		abilities: {0: "Cloud Nine"},
+		heightm: 6.1,
+		weightkg: 70,
+		color: "Yellow",
+		eggGroups: ["Undiscovered"],
+		changesFrom: "Malevorus",
+	},
+
+	//endregion
+
 	//#region Meowth-Delta's Evolution line
 
 	meowth: {
