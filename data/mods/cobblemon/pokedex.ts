@@ -2272,6 +2272,23 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 	},
 	//#endregion
 
+	//#region Whirling Abyss
+
+	whirlingabyss: {
+		num: 2055,
+		name: "Whirling Abyss",
+		types: ["Psychic", "Water"],
+		gender: "N",
+		baseStats: {hp: 105, atk: 110, def: 140, spa: 110, spd: 115, spe: 90},
+		abilities: {0: "Protosynthesis"},
+		heightm: 4.9,
+		weightkg: 256,
+		color: "White",
+		eggGroups: ["Undiscovered"],
+	},
+
+	//#endregion
+
 	//#region Wooper-Delta & Quaxolotl & Wooper-Omega & Labsire
 	wooper: { // Adjusting Wooper's Evos
 		inherit: true,
