@@ -850,6 +850,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		eggGroups: ["Field"],
 	},
 	//#endregion
+
 	//#region Falink-Delta
 	falinks: {
 		inherit: true,
@@ -871,6 +872,32 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		eggGroups: ["Fairy", "Mineral"],
 	},
 	//#endregion
+
+	//#region Furret-Delta
+
+	sentret: {
+		inherit: true,
+		evos: ["Furret", "Furret-Delta"]
+	},
+	furret: {
+		inherit: true,
+		otherFormes: ["Furret-Delta"],
+		formeOrder: ["Furret", "Furret-Delta"],
+	},
+	furretdelta: {
+		num: 162,
+		name: "Furret-Delta",
+		baseSpecies: "Furret",
+		forme: "Delta",
+		types: ["Normal", "Ice"],
+		baseStats: {hp: 90, atk: 52, def: 95, spa: 38, spd: 65, spe: 75},
+		abilities: {0: "Run Away", 1: "Soundproof", H: "Fur Coat"},
+		heightm: 1.8,
+		weightkg: 30,
+		color: "Blue",
+		prevo: "Sentret",
+		eggGroups: ["Field"],
+	},
 
 	//#region Garchomp-Delta's Evolution Line
 	gible: {
