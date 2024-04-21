@@ -1765,7 +1765,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 	},
 	polfeegeist: {
 		num: 2046,
-		name: "Sinisurge-Delta",
+		name: "Polfeegeist",
 		baseForme: "Stirred",
 		types: ["Water", "Ghost"],
 		gender: "N",
@@ -1779,21 +1779,9 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		formeOrder: ["Polfeegeist", "Polfeegeist-Sheltered"],
 		eggGroups: ["Mineral", "Amorphous"],
 	},
-	polfeegeistsheltered: {
-		num: 2046,
-		name: "Polfeegeist-Sheltered",
-		baseSpecies: "Polfeegeist",
-		forme: "Sheltered",
-		types: ["Steel", "Ghost"],
-		baseStats: {hp: 65, atk: 75, def: 121, spa: 91, spd: 85, spe: 70},
-		abilities: {0: "Sheltered Slumber"},
-		heightm: 1.7,
-		weightkg: 5.6,
-		color: "Brown",
-		eggGroups: ["Mineral", "Amorphous"],
-	},
 
 	//#endregion
+
 	//#region Spiritomb-Unbound
 	spiritomb: {
 		inherit: true,
