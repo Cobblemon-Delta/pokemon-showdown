@@ -1781,7 +1781,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		otherFormes: ["Polfeegeist-Blade"],
 		formeOrder: ["Polfeegeist", "Polfeegeist-Blade"],
 	},
-	polfeegeistshield: {
+	/*polfeegeistshield: {
 		num: 2046,
 		name: "Polfeegeist-Blade",
 		baseSpecies: "Polfeegeist",
@@ -1795,7 +1795,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		eggGroups: ["Mineral", "Amorphous"],
 		requiredAbility: "Sheltered Slumber",
 		battleOnly: "Polfeegeist",
-	},
+	},*/
 
 	//#endregion
 
