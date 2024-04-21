@@ -1021,6 +1021,41 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		eggGroups: ["Water 1"],
 	},
 	//#endregion
+
+	//#region Iron Revival
+
+	ironrevival: {
+		num: 2053,
+		name: "Iron Revival",
+		types: ["Flying", "Electric"],
+		gender: "N",
+		baseStats: {hp: 105, atk: 85, def: 105, spa: 135, spd: 130, spe: 110},
+		abilities: {0: "Quark Drive"},
+		heightm: 4.3,
+		weightkg: 230,
+		color: "Red",
+		eggGroups: ["Undiscovered"],
+	},
+
+	//#endregion
+
+	//#region Iron Storm
+
+	ironstorm: {
+		num: 2054,
+		name: "Iron Storm",
+		types: ["Flying", "Steel"],
+		gender: "N",
+		baseStats: {hp: 105, atk: 110, def: 115, spa: 110, spd: 140, spe: 90},
+		abilities: {0: "Quark Drive"},
+		heightm: 5.8,
+		weightkg: 240,
+		color: "White",
+		eggGroups: ["Undiscovered"],
+	},
+
+	//#endregion
+
 	//#region Klocktowl-Delta's Evolution Line
 
 	hoothoot: {
