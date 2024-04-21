@@ -281,6 +281,69 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 
 	//#endregion
 
+	//#region Budew-Delta's Evolution Line
+
+	budew: {
+		inherit: true,
+		otherFormes: ["Budew-Delta"],
+		formeOrder: ["Budew", "Budew-Delta"],
+	},
+	budewdelta: {
+		num: 406,
+		name: "Budew-Delta",
+		baseSpecies: "Budew",
+		forme: "Delta",
+		types: ["Grass", "Steel"],
+		baseStats: {hp: 40, atk: 50, def: 70, spa: 30, spd: 35, spe: 55},
+		abilities: {0: "Natural Cure", 1: "Chlorophyll", H: "Iron Barbs"},
+		heightm: 0.2,
+		weightkg: 4.5,
+		color: "Green",
+		evos: ["Roselia-Delta"],
+		eggGroups: ["Undiscovered"],
+	},
+	roselia: {
+		inherit: true,
+		otherFormes: ["Roselia-Delta"],
+		formeOrder: ["Roselia", "Roselia-Delta"],
+	},
+	roseliadelta: {
+		num: 407,
+		name: "Roselia-Delta",
+		baseSpecies: "Roselia",
+		forme: "Delta",
+		types: ["Grass", "Steel"],
+		baseStats: {hp: 50, atk: 80, def: 95, spa: 40, spd: 65, spe: 70},
+		abilities: {0: "Natural Cure", 1: "Chlorophyll", H: "Iron Barbs"},
+		heightm: 0.3,
+		weightkg: 7.5,
+		color: "Green",
+		evos: ["Roserade-Delta"],
+		prevo: "Budew-Delta",
+		eggGroups: ["Fairy", "Grass"],
+	},
+	roserade: {
+		inherit: true,
+		otherFormes: ["Roserade-Delta"],
+		formeOrder: ["Roserade", "Roserade-Delta"],
+	},
+	roseradedelta: {
+		num: 408,
+		name: "Roserade-Delta",
+		baseSpecies: "Roserade",
+		forme: "Delta",
+		types: ["Grass", "Steel"],
+		baseStats: {hp: 60, atk: 95, def: 120, spa: 60, spd: 80, spe: 100},
+		abilities: {0: "Sharpness", 1: "Chlorophyll", H: "Swordmaster"},
+		heightm: 1.1,
+		weightkg: 18.5,
+		color: "Green",
+		prevo: "Roselia-Delta",
+		eggGroups: ["Fairy", "Grass"],
+	},
+
+	//#endregion
+
 	//#region Charizard-Delta's Evolution Line
 
 	charmander: {
