@@ -1766,7 +1766,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 	polfeegeist: {
 		num: 2046,
 		name: "Polfeegeist",
-		baseForme: "Stirred",
+		baseForme: "Shield",
 		types: ["Water", "Ghost"],
 		gender: "N",
 		baseStats: {hp: 65, atk: 75, def: 121, spa: 91, spd: 85, spe: 70},
@@ -1774,16 +1774,18 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		heightm: 0.8,
 		weightkg: 5.6,
 		color: "Brown",
-		prevo: "sinisfee",
-		otherFormes: ["Polfeegeist-Sheltered"],
-		formeOrder: ["Polfeegeist", "Polfeegeist-Sheltered"],
+		prevo: "Sinisfee",
+		evoType: "useItem",
+		evoItem: "Dusk Stone",
 		eggGroups: ["Mineral", "Amorphous"],
+		otherFormes: ["Polfeegeist-Blade"],
+		formeOrder: ["Polfeegeist", "Polfeegeist-Blade"],
 	},
-	polfeegeistsheltered: {
+	polfeegeistshield: {
 		num: 2046,
-		name: "Polfeegeist-Sheltered",
+		name: "Polfeegeist-Blade",
 		baseSpecies: "Polfeegeist",
-		forme: "Sheltered",
+		forme: "Blade",
 		types: ["Steel", "Ghost"],
 		baseStats: {hp: 65, atk: 75, def: 121, spa: 91, spd: 85, spe: 70},
 		abilities: {0: "Sheltered Slumber"},
@@ -1791,6 +1793,8 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		weightkg: 5.6,
 		color: "Brown",
 		eggGroups: ["Mineral", "Amorphous"],
+		requiredAbility: "Sheltered Slumber",
+		battleOnly: "Polfeegeist",
 	},
 
 	//#endregion
