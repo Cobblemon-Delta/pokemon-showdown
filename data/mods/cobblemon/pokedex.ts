@@ -2377,7 +2377,31 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		evoType: "levelMove",
 		evoMove: "Ancient Power",
 		eggGroups: ["Grass", "Flying"],
+	},
+	//#endregion
+
+	//#region Mega Zoroark-Hisui
+
+	zoroark: {
+		inherit: true,
+		otherFormes: ["Zoroark-Hisui", "Zoroark-Hisui-Mega"],
+		formeOrder: ["Zoroark", "Zoroark-Hisui", "Zoroark-Hisui-Mega"],
+	},
+	zoroarkhisuimega: {
+		num: 571,
+		name: "Zoroark-Hisui-Mega",
+		baseSpecies: "Zoroark",
+		forme: "Mega",
+		types: ["Normal", "Ghost"],
+		baseStats: {hp: 55, atk: 130, def: 70, spa: 155, spd: 70, spe: 130},
+		abilities: {0: "Shapeshift"},
+		heightm: 2.1,
+		weightkg: 90.5,
+		color: "Gray",
+		eggGroups: ["Field"],
+		requiredItem: "HisuianZoroarkanite",
 	}
+
 	//#endregion
 
 
