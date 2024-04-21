@@ -1374,7 +1374,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		num: 2052,
 		name: "Malevorus-Therian",
 		baseSpecies: "Malevorus",
-		forme: "Therian",
+		forme: "DTherian",
 		types: ["Dark", "Flying"],
 		gender: "M",
 		baseStats: {hp: 89, atk: 105, def: 80, spa: 130, spd: 80, spe: 116},
