@@ -1370,7 +1370,21 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		otherFormes: ["Malevorus-Therian"],
 		formeOrder: ["Malevorus", "Malevorus-Therian"],
 	},
-
+	malevorustherian: {
+		num: 2052,
+		name: "Malevorus-Therian",
+		baseSpecies: "Malevorus",
+		forme: "Therian",
+		types: ["Dark", "Flying"],
+		gender: "M",
+		baseStats: {hp: 89, atk: 105, def: 80, spa: 130, spd: 80, spe: 116},
+		abilities: {0: "Cloud Nine"},
+		heightm: 1.3,
+		weightkg: 68,
+		color: "Brown",
+		eggGroups: ["Undiscovered"],
+		changesFrom: "Malevorus",
+	},
 
 	//endregion
 
