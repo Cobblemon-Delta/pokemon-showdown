@@ -666,25 +666,6 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 	},
 	//#endregion
 
-	//#region Drifblimp
-	drifblim: {
-		inherit: true,
-		evos: ["Drifblimp"],
-	},
-	drifblimp: {
-		num: 2051,
-		name: "Drifblimp",
-		types: ["Ghost", "Flying"],
-		baseStats: {hp: 200, atk: 58, def: 62, spa: 100, spd: 70, spe: 60},
-		abilities: {0: "Stamina", 1: "Unburden", H: "Flare Boost"},
-		heightm: 14.2,
-		weightkg: 120,
-		prevo: "Drifblim",
-		eggGroups: ["Amorphous"],
-	},
-
-	//#endregion
-
 	//#region Ectarachnid
 	ariados: {
 		inherit: true,
