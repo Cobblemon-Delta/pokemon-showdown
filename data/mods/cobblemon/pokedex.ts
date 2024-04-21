@@ -1977,20 +1977,6 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		prevo: "Vibrava-Delta",
 		eggGroups: ["Bug", "Dragon"],
 	},
-	flygonmega: {
-		num: 330,
-		name: "Flygon-Mega",
-		baseSpecies: "Flygon",
-		forme: "Mega",
-		types: ["Ground", "Dragon"],
-		baseStats: {hp: 80, atk: 115, def: 80, spa: 115, spd: 80, spe: 150},
-		abilities: {0: "Desert Spirit"},
-		heightm: 2.1,
-		weightkg: 50,
-		color: "Green",
-		eggGroups: ["Bug", "Dragon"],
-		requiredItem: "Flygonite",
-	},
 
 	//#endregion
 
