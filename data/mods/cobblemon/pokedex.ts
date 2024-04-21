@@ -1529,7 +1529,7 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 	},
 	//#endregion
 
-	//#region Shinx-Delta's Evolution Line
+	//#region Sandygast-Delta's Evolution Line
 
 	sandygast: {
 		inherit: true,
@@ -1568,6 +1568,49 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		color: "Brown",
 		prevo: "Sandygast-Delta",
 		eggGroups: ["Amorphous"],
+	},
+
+	//#endregion
+
+	//#region Shellos-Delta's Evolution Line
+
+	shellos: {
+		inherit: true,
+		otherFormes: ["Shellos-Delta"],
+		formeOrder: ["Shellos", "Shellos-Delta"],
+	},
+	shellosdelta: {
+		num: 422,
+		name: "Shellos-Delta",
+		baseSpecies: "Shellos",
+		forme: "Delta",
+		types: ["Water"],
+		baseStats: {hp: 76, atk: 43, def: 48, spa: 57, spd: 62, spe: 34},
+		abilities: {0: "Sticky Hold", 1: "Gooey", H: "Immunity"},
+		heightm: 0.3,
+		weightkg: 5,
+		color: "Blue",
+		evos: ["Gastrodon-Delta"],
+		eggGroups: ["Water 1", "Amorphous"],
+	},
+	gastrodon: {
+		inherit: true,
+		otherFormes: ["Gastrodon-Delta"],
+		formeOrder: ["Gastrodon", "Gastrodon-Delta"],
+	},
+	gastrodondelta: {
+		num: 374,
+		name: "Gastrodon-Delta",
+		baseSpecies: "Gastrodon",
+		forme: "Delta",
+		types: ["Water", "Dragon"],
+		baseStats: {hp: 111, atk: 73, def: 78, spa: 82, spd: 92, spe: 39},
+		abilities: {0: "Sticky Hold", 1: "Gooey", H: "Poison Heal"},
+		heightm: 0.9,
+		weightkg: 26,
+		color: "Blue",
+		prevo: "Shellos-Delta",
+		eggGroups: ["Water 1", "Amorphous"],
 	},
 
 	//#endregion
