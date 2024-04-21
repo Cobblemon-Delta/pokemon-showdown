@@ -409,79 +409,6 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 
 	//#region Chimchar-Delta's Evolution Line
 
-	chimchar: {
-		inherit: true,
-		otherFormes: ["Chimchar-Delta"],
-		formeOrder: ["Chimchar", "Chimchar-Delta"],
-	},
-	chimchardelta: {
-		num: 390,
-		name: "Chimchar-Delta",
-		baseSpecies: "Chimchar",
-		forme: "Delta",
-		types: ["Electric"],
-		baseStats: {hp: 44, atk: 58, def: 44, spa: 58, spd: 44, spe: 61},
-		abilities: {0: "Surge", H: "Vital Spirit"},
-		heightm: 0.8,
-		weightkg: 6.5,
-		color: "Yellow",
-		evos: ["Monferno-Delta"],
-		eggGroups: ["Field", "Human-Like"],
-	},
-	monferno: {
-		inherit: true,
-		otherFormes: ["Monferno-Delta"],
-		formeOrder: ["Monferno", "Monferno-Delta"],
-	},
-	monfernodelta: {
-		num: 391,
-		name: "Monferno-Delta",
-		baseSpecies: "Monferno",
-		forme: "Delta",
-		types: ["Electric", "Fighting"],
-		baseStats: {hp: 64, atk: 76, def: 52, spa: 76, spd: 52, spe: 85},
-		abilities: {0: "Surge", H: "Vital Spirit"},
-		heightm: 0.8,
-		weightkg: 26,
-		color: "Yellow",
-		evos: ["Infernape-Delta"],
-		prevo: "Chimchar-Delta",
-		eggGroups: ["Field", "Human-Like"],
-	},
-	infernape: {
-		inherit: true,
-		otherFormes: ["Infernape-Delta", "Infernape-Delta-Mega"],
-		formeOrder: ["Infernape", "Infernape-Delta", "Infernape-Delta-Mega"],
-	},
-	infernapedelta: {
-		num: 392,
-		name: "Infernape-Delta",
-		baseSpecies: "Infernape",
-		forme: "Delta",
-		types: ["Electric", "Fighting"],
-		baseStats: {hp: 73, atk: 102, def: 75, spa: 97, spd: 75, spe: 112},
-		abilities: {0: "Surge", H: "Long Reach"},
-		heightm: 0.8,
-		weightkg: 65,
-		color: "Yellow",
-		prevo: "Monferno-Delta",
-		eggGroups: ["Field", "Human-Like"],
-	},
-	infernapedeltamega: {
-		num: 392,
-		name: "Infernape-Delta-Mega",
-		baseSpecies: "Infernape-Delta",
-		forme: "Mega",
-		types: ["Electric", "Fighting"],
-		baseStats: {hp: 55, atk: 127, def: 92, spa: 127, spd: 92, spe: 123},
-		abilities: {0: "Monarch's Pole"},
-		heightm: 2.1,
-		weightkg: 65,
-		color: "Yellow",
-		eggGroups: ["Field", "Human-Like"],
-		requiredItem: "DeltaInfernapite",
-	},
-
 	//#endregion
 
 	//#region Chimecho-Delta
@@ -2050,20 +1977,6 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 		prevo: "Vibrava-Delta",
 		eggGroups: ["Bug", "Dragon"],
 	},
-	flygonmega: {
-		num: 330,
-		name: "Flygon-Mega",
-		baseSpecies: "Flygon",
-		forme: "Mega",
-		types: ["Ground", "Dragon"],
-		baseStats: {hp: 80, atk: 115, def: 80, spa: 115, spd: 80, spe: 150},
-		abilities: {0: "Desert Spirit"},
-		heightm: 2.1,
-		weightkg: 50,
-		color: "Green",
-		eggGroups: ["Bug", "Dragon"],
-		requiredItem: "Flygonite",
-	},
 
 	//#endregion
 
@@ -2392,26 +2305,6 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 	//#endregion
 
 	//#region Mega Zoroark-Hisui
-
-	zoroark: {
-		inherit: true,
-		otherFormes: ["Zoroark-Hisui", "Zoroark-Hisui-Mega"],
-		formeOrder: ["Zoroark", "Zoroark-Hisui", "Zoroark-Hisui-Mega"],
-	},
-	zoroarkhisuimega: {
-		num: 571,
-		name: "Zoroark-Hisui-Mega",
-		baseSpecies: "Zoroark-Hisui",
-		forme: "Mega",
-		types: ["Normal", "Ghost"],
-		baseStats: {hp: 55, atk: 130, def: 70, spa: 155, spd: 70, spe: 130},
-		abilities: {0: "Shapeshift"},
-		heightm: 2.1,
-		weightkg: 90.5,
-		color: "Gray",
-		eggGroups: ["Field"],
-		requiredItem: "HisuianZoroarkanite",
-	}
 
 	//#endregion
 
