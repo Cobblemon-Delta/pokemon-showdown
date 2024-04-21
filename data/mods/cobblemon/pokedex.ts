@@ -470,11 +470,11 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 	infernapedeltamega: {
 		num: 392,
 		name: "Infernape-Delta-Mega",
-		baseSpecies: "Infernape-Delta",
+		baseSpecies: "Infernape",
 		forme: "Mega",
 		types: ["Electric", "Fighting"],
 		baseStats: {hp: 55, atk: 127, def: 92, spa: 127, spd: 92, spe: 123},
-		abilities: {0: "Monarchs Pole"},
+		abilities: {0: "Monarch's Pole"},
 		heightm: 2.1,
 		weightkg: 65,
 		color: "Yellow",
