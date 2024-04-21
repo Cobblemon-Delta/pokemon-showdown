@@ -1491,6 +1491,23 @@ export const Pokedex: {[specieid: string]: ModdedSpeciesData} ={
 	},
 	//#endregion
 
+	//#region Rising Pheonix
+
+	risingpheonix: {
+		num: 2056,
+		name: "Rising Pheonix",
+		types: ["Fire", "Fighting"],
+		gender: "N",
+		baseStats: {hp: 105, atk: 135, def: 130, spa: 85, spd: 105, spe: 110},
+		abilities: {0: "Protosynthesis"},
+		heightm: 3.5,
+		weightkg: 165,
+		color: "Red",
+		eggGroups: ["Undiscovered"],
+	},
+
+	//#endregion
+
 	//#region Sableye-Delta
 	sableye: {
 		inherit: true,
